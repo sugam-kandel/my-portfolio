@@ -19,20 +19,20 @@ export default function Stats() {
   };
 
   return (
-    <section id="stats" className="py-24 bg-[#080916] relative overflow-hidden">
+    <section id="stats" className="py-24 bg-(--bg-section) relative overflow-hidden">
       {/* Background radial glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-cyan-500/5 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10 flex flex-col items-center">
         {/* Section Header */}
         <div className="text-center space-y-2 mb-16 max-w-xl">
-          <span className="text-xs font-mono font-bold tracking-[0.2em] text-cyan-400">BY THE NUMBERS</span>
-          <h2 className="text-3xl md:text-4xl font-display font-semibold text-white capitalize tracking-tight">
-            MY PERSONAL <br />
-            <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">INSIGHTS & SPECS</span>
+          <span className="text-xs font-mono font-bold tracking-[0.2em] text-cyan-400">By the Numbers</span>
+          <h2 className="text-3xl md:text-4xl font-display font-semibold text-(--text-primary) capitalize tracking-tight">
+            My Personal <br />
+            <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Insights & Specs</span>
           </h2>
           <div className="w-12 h-1 bg-gradient-to-r from-cyan-500 to-blue-500 rounded mx-auto mt-3" />
-          <p className="text-neutral-400 text-xs font-light pt-2">
+          <p className="text-(--text-muted) text-xs font-light pt-2">
             A metric-focused glance into my academic dedication, travel exploration, motorcycle research coverage, and active coding hours.
           </p>
         </div>
@@ -55,14 +55,14 @@ export default function Stats() {
               id="stat-diamond-academic"
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.3 }}
-              className="w-full h-full bg-[#0B0C1E] border border-cyan-500/30 hover:border-cyan-400 rotate-45 rounded-lg flex items-center justify-center shadow-lg shadow-cyan-500/5 cursor-pointer relative group overflow-hidden"
+              className="w-full h-full bg-(--bg-panel) border border-cyan-500/30 hover:border-cyan-400 rotate-45 rounded-lg flex items-center justify-center shadow-lg shadow-cyan-500/5 cursor-pointer relative group overflow-hidden"
             >
               {/* Outer Glow */}
               <div className="absolute inset-0 bg-cyan-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <div className="-rotate-45 text-center flex flex-col items-center justify-center p-4">
                 {getIcon(STATS[3].iconName, 'w-6 h-6 text-cyan-400 mb-1')}
-                <span className="font-display font-black text-white text-lg leading-none tracking-tight">{STATS[3].value}</span>
-                <span className="font-mono text-[8px] text-neutral-400 tracking-wider capitalize mt-1">{STATS[3].label}</span>
+                <span className="font-display font-semibold text-(--text-primary) text-lg leading-none tracking-tight">{STATS[3].value}</span>
+                <span className="font-mono text-[8px] text-(--text-muted) tracking-wider capitalize mt-1">{STATS[3].label}</span>
               </div>
             </motion.div>
           </div>
@@ -73,13 +73,13 @@ export default function Stats() {
               id="stat-diamond-coding"
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.3 }}
-              className="w-full h-full bg-[#0B0C1E] border border-emerald-500/30 hover:border-emerald-400 rotate-45 rounded-lg flex items-center justify-center shadow-lg shadow-emerald-500/5 cursor-pointer relative group overflow-hidden"
+              className="w-full h-full bg-(--bg-panel) border border-emerald-500/30 hover:border-emerald-400 rotate-45 rounded-lg flex items-center justify-center shadow-lg shadow-emerald-500/5 cursor-pointer relative group overflow-hidden"
             >
               <div className="absolute inset-0 bg-emerald-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <div className="-rotate-45 text-center flex flex-col items-center justify-center p-4">
                 {getIcon(STATS[0].iconName, 'w-6 h-6 text-emerald-400 mb-1')}
-                <span className="font-display font-black text-white text-lg leading-none tracking-tight">{STATS[0].value}</span>
-                <span className="font-mono text-[8px] text-neutral-400 tracking-wider capitalize mt-1">{STATS[0].label}</span>
+                <span className="font-display font-semibold text-(--text-primary) text-lg leading-none tracking-tight">{STATS[0].value}</span>
+                <span className="font-mono text-[8px] text-(--text-muted) tracking-wider capitalize mt-1">{STATS[0].label}</span>
               </div>
             </motion.div>
           </div>
@@ -90,13 +90,13 @@ export default function Stats() {
               id="stat-diamond-bikes"
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.3 }}
-              className="w-full h-full bg-[#0B0C1E] border border-pink-500/30 hover:border-pink-400 rotate-45 rounded-lg flex items-center justify-center shadow-lg shadow-pink-500/5 cursor-pointer relative group overflow-hidden"
+              className="w-full h-full bg-(--bg-panel) border border-pink-500/30 hover:border-pink-400 rotate-45 rounded-lg flex items-center justify-center shadow-lg shadow-pink-500/5 cursor-pointer relative group overflow-hidden"
             >
               <div className="absolute inset-0 bg-pink-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <div className="-rotate-45 text-center flex flex-col items-center justify-center p-4">
                 {getIcon(STATS[1].iconName, 'w-6 h-6 text-pink-400 mb-1')}
-                <span className="font-display font-black text-white text-lg leading-none tracking-tight">{STATS[1].value}</span>
-                <span className="font-mono text-[8px] text-neutral-400 tracking-wider capitalize mt-1">{STATS[1].label}</span>
+                <span className="font-display font-semibold text-(--text-primary) text-lg leading-none tracking-tight">{STATS[1].value}</span>
+                <span className="font-mono text-[8px] text-(--text-muted) tracking-wider capitalize mt-1">{STATS[1].label}</span>
               </div>
             </motion.div>
           </div>
@@ -107,21 +107,21 @@ export default function Stats() {
               id="stat-diamond-travel"
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.3 }}
-              className="w-full h-full bg-[#0B0C1E] border border-purple-500/30 hover:border-purple-400 rotate-45 rounded-lg flex items-center justify-center shadow-lg shadow-purple-500/5 cursor-pointer relative group overflow-hidden"
+              className="w-full h-full bg-(--bg-panel) border border-purple-500/30 hover:border-purple-400 rotate-45 rounded-lg flex items-center justify-center shadow-lg shadow-purple-500/5 cursor-pointer relative group overflow-hidden"
             >
               <div className="absolute inset-0 bg-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <div className="-rotate-45 text-center flex flex-col items-center justify-center p-4">
                 {getIcon(STATS[2].iconName, 'w-6 h-6 text-purple-400 mb-1')}
-                <span className="font-display font-black text-white text-lg leading-none tracking-tight">{STATS[2].value}</span>
-                <span className="font-mono text-[8px] text-neutral-400 tracking-wider capitalize mt-1">{STATS[2].label}</span>
+                <span className="font-display font-semibold text-(--text-primary) text-lg leading-none tracking-tight">{STATS[2].value}</span>
+                <span className="font-mono text-[8px] text-(--text-muted) tracking-wider capitalize mt-1">{STATS[2].label}</span>
               </div>
             </motion.div>
           </div>
 
           {/* Core watermark text center */}
-          <div className="absolute text-[10px] font-mono tracking-widest text-neutral-600 capitalize pointer-events-none text-center">
-            CORE METRICS<br />
-            <span className="text-cyan-400 font-bold">SUGAM_K</span>
+          <div className="absolute text-[10px] font-mono tracking-widest text-(--text-dim) capitalize pointer-events-none text-center">
+            Core Metrics<br />
+            <span className="text-cyan-400 font-bold">Sugam K</span>
           </div>
         </div>
 
@@ -131,7 +131,7 @@ export default function Stats() {
             <div
               id={`mobile-stat-card-${stat.id}`}
               key={stat.id}
-              className={`p-6 rounded-xl bg-[#0B0C1E]/50 border ${
+              className={`p-6 rounded-xl bg-(--bg-panel)/50 border ${
                 idx === 0
                   ? 'border-emerald-500/20 hover:border-emerald-400/40 shadow-sm shadow-emerald-500/5'
                   : idx === 1
@@ -141,16 +141,16 @@ export default function Stats() {
                   : 'border-cyan-500/20 hover:border-cyan-400/40 shadow-sm shadow-cyan-500/5'
               } flex flex-col items-center text-center space-y-3 transition-colors`}
             >
-              <div className={`p-3 rounded-lg bg-white/5 border border-white/5 ${
+              <div className={`p-3 rounded-lg bg-(--bg-chip) border border-(--border-subtle) ${
                 idx === 0 ? 'text-emerald-400' : idx === 1 ? 'text-pink-400' : idx === 2 ? 'text-purple-400' : 'text-cyan-400'
               }`}>
                 {getIcon(stat.iconName, 'w-5 h-5')}
               </div>
               <div className="space-y-1">
-                <span className="block font-display font-black text-white text-xl">{stat.value}</span>
-                <span className="block font-mono text-[9px] text-neutral-400 tracking-wider capitalize">{stat.label}</span>
+                <span className="block font-display font-semibold text-(--text-primary) text-xl">{stat.value}</span>
+                <span className="block font-mono text-[9px] text-(--text-muted) tracking-wider capitalize">{stat.label}</span>
               </div>
-              <p className="text-neutral-500 text-[10px] leading-tight font-light pt-1 border-t border-white/5 w-full">
+              <p className="text-(--text-faint) text-[10px] leading-tight font-light pt-1 border-t border-(--border-subtle) w-full">
                 {stat.description}
               </p>
             </div>

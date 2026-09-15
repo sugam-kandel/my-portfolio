@@ -9,36 +9,36 @@ export default function Hero() {
 
   const slides = [
     {
-      subtitle: 'STUDENT & CODER',
-      title: 'CODING THE FUTURE',
-      headingHighlight: 'ONE LINE AT A TIME',
+      subtitle: 'Student & Coder',
+      title: 'Coding the Future',
+      headingHighlight: 'One Line at a Time',
       description:
         "I'm a 17-year-old Computer Science student at Everest Secondary School, and I began my coding journey just a few months ago. Since then, I've been fascinated by creating interactive web applications, solving logical challenges, and continuously expanding my skills as a developer.",
-      cta: 'EXPLORE MY PASSIONS',
+      cta: 'Explore My Passions',
       sectionId: 'passions',
       icon: Code,
       accentColor: 'text-cyan-400',
       glowColor: 'rgba(34, 211, 238, 0.15)',
     },
     {
-      subtitle: 'BIKE ENTHUSIAST',
-      title: 'RIDING THE PRESENT',
-      headingHighlight: 'WITH FUEL & FREEDOM',
+      subtitle: 'Bike Enthusiast',
+      title: 'Riding the Present',
+      headingHighlight: 'With Fuel & Freedom',
       description:
         'I have a keen obsession with motorbikes—studying specs, understanding dual-channel ABS, cylinder layouts, and exhaust notes. Living in Sainamaina, Butwal, riding through beautiful terrains represents my spirit of adventure.',
-      cta: 'CHECK MY VEHICLE INSIGHTS',
+      cta: 'Check My Vehicle Insights',
       sectionId: 'journey',
       icon: Bike,
       accentColor: 'text-pink-400',
       glowColor: 'rgba(244, 63, 94, 0.15)',
     },
     {
-      subtitle: 'CURIOUS TRAVELER',
-      title: 'EXPLORING SCENIC NEPAL',
-      headingHighlight: 'CREATING NEW MEMORIES',
+      subtitle: 'Curious Traveler',
+      title: 'Exploring Scenic Nepal',
+      headingHighlight: 'Creating New Memories',
       description:
         'Born in the peaceful hills of Shringa, Gulmi, and now living in Rupandehi, I thrive on traveling to new destinations, gathering deep experiences, and watching inspirational films that fuel my digital visual ideas.',
-      cta: 'VIEW MY TRAVEL DIARY',
+      cta: 'View My Travel Diary',
       sectionId: 'stats',
       icon: Compass,
       accentColor: 'text-purple-400',
@@ -51,7 +51,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="min-h-screen relative flex items-center bg-[#05060F] bg-dark-grid pt-24 pb-16 overflow-hidden"
+      className="min-h-screen relative flex items-center bg-(--bg-base) bg-dark-grid pt-24 pb-16 overflow-hidden"
     >
       {/* Background Glows */}
       <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] rounded-full bg-cyan-900/10 blur-[120px] pointer-events-none" />
@@ -81,7 +81,7 @@ export default function Hero() {
               <h1 className="sr-only">Sugam Kandel | Portfolio - CS Student &amp; Software Developer</h1>
 
               {/* Slide Heading */}
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-semibold text-white leading-tight capitalize">
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-semibold text-(--text-primary) leading-tight capitalize">
                 {currentSlide.title} <br />
                 <span className={`bg-gradient-to-r ${activeSlide === 0 ? 'from-cyan-400 to-blue-500' : activeSlide === 1 ? 'from-pink-400 to-rose-500' : 'from-purple-400 to-indigo-500'} bg-clip-text text-transparent`}>
                   {currentSlide.headingHighlight}
@@ -89,12 +89,12 @@ export default function Hero() {
               </h2>
 
               {/* Slide Description */}
-              <p className="text-neutral-300 text-sm md:text-base leading-relaxed max-w-xl font-sans font-light">
+              <p className="text-(--text-body) text-sm md:text-base leading-relaxed max-w-xl font-sans font-light">
                 {currentSlide.description}
               </p>
 
               {/* Interactive Slide Info Badge */}
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded bg-white/5 border border-white/10 text-xs text-neutral-400 font-mono">
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded bg-(--bg-chip) border border-(--border-soft) text-xs text-(--text-muted) font-mono">
                 <Terminal className="w-3.5 h-3.5 text-cyan-400" />
                 <span>Born: 2066-07-07 BS • Nepal</span>
               </div>
@@ -104,7 +104,7 @@ export default function Hero() {
                 <button
                   id={`hero-cta-${activeSlide}`}
                   onClick={() => navigate('/' + currentSlide.sectionId)}
-                  className="group relative inline-flex items-center gap-3 px-8 py-4 bg-transparent text-white font-display font-bold text-xs tracking-widest uppercase cursor-pointer overflow-hidden transition-all duration-300 hover:scale-[1.02]"
+                  className="group relative inline-flex items-center gap-3 px-8 py-4 bg-transparent text-(--text-primary) font-display font-bold text-xs tracking-widest capitalize cursor-pointer overflow-hidden transition-all duration-300 hover:scale-[1.02]"
                 >
                   {/* Decorative Angular Border matching screenshot style */}
                   <div className="absolute inset-0 border border-cyan-500/30 group-hover:border-cyan-400 transition-colors" />
@@ -112,7 +112,7 @@ export default function Hero() {
                   <div className="absolute bottom-0 right-0 w-2 h-2 border-b-2 border-r-2 border-cyan-400" />
                   
                   {/* Hover fluid fill */}
-                  <div className="absolute inset-[1px] bg-[#0c0d23] -z-10" />
+                  <div className="absolute inset-[1px] bg-(--bg-chip) -z-10" />
                   <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity" />
 
                   <span>{currentSlide.cta}</span>
@@ -122,7 +122,7 @@ export default function Hero() {
                 <button
                   id="hero-about-me-btn"
                   onClick={() => navigate('/education')}
-                  className="px-6 py-4 text-xs font-display font-bold tracking-widest text-neutral-400 hover:text-white uppercase transition-colors flex items-center gap-2 cursor-pointer"
+                  className="px-6 py-4 text-xs font-display font-bold tracking-widest text-(--text-muted) hover:text-(--text-primary) capitalize transition-colors flex items-center gap-2 cursor-pointer"
                 >
                   <Sparkles className="w-4 h-4 text-amber-400" />
                   <span>My Background</span>
@@ -132,7 +132,7 @@ export default function Hero() {
           </AnimatePresence>
 
           {/* Slide Indicators / Tabs */}
-          <div className="flex items-center gap-6 mt-16 border-t border-white/5 pt-8">
+          <div className="flex items-center gap-6 mt-16 border-t border-(--border-subtle) pt-8">
             {slides.map((slide, idx) => {
               const IconComponent = slide.icon;
               return (
@@ -144,7 +144,7 @@ export default function Hero() {
                 >
                   <span
                     className={`font-mono text-xs font-bold transition-colors ${
-                      activeSlide === idx ? 'text-white' : 'text-neutral-600 group-hover:text-neutral-400'
+                      activeSlide === idx ? 'text-(--text-primary)' : 'text-(--text-dim) group-hover:text-(--text-muted)'
                     }`}
                   >
                     0{idx + 1}
@@ -158,12 +158,12 @@ export default function Hero() {
                             : idx === 1
                             ? 'text-pink-400 scale-110'
                             : 'text-purple-400 scale-110'
-                          : 'text-neutral-500 group-hover:text-neutral-300'
+                          : 'text-(--text-faint) group-hover:text-(--text-body)'
                       }`}
                     />
                     <span
-                      className={`text-xs font-display font-bold tracking-wider uppercase transition-colors ${
-                        activeSlide === idx ? 'text-white' : 'text-neutral-500 group-hover:text-neutral-300'
+                      className={`text-xs font-display font-bold tracking-wider capitalize transition-colors ${
+                        activeSlide === idx ? 'text-(--text-primary)' : 'text-(--text-faint) group-hover:text-(--text-body)'
                       }`}
                     >
                       {idx === 0 ? 'Coding' : idx === 1 ? 'Rides' : 'Travel'}
@@ -203,14 +203,14 @@ export default function Hero() {
             />
 
             {/* Glowing Tech Ring Border */}
-            <div className="absolute inset-0 rounded-2xl border border-white/5 bg-gradient-to-br from-white/10 to-transparent -rotate-3 group-hover:rotate-0 transition-transform duration-500" />
+            <div className="absolute inset-0 rounded-2xl border border-(--border-subtle) bg-gradient-to-br from-white/10 to-transparent -rotate-3 group-hover:rotate-0 transition-transform duration-500" />
             
             {/* Cyan Border Corners */}
             <div className="absolute top-[-6px] left-[-6px] w-6 h-6 border-t-[3px] border-l-[3px] border-cyan-400 rounded-tl-lg" />
             <div className="absolute bottom-[-6px] right-[-6px] w-6 h-6 border-b-[3px] border-r-[3px] border-cyan-400 rounded-br-lg" />
 
             {/* Actual Image Holder */}
-            <div className="absolute inset-3 rounded-xl overflow-hidden bg-[#0a0b18] rotate-3 group-hover:rotate-0 transition-all duration-500 border border-white/10 shadow-2xl flex items-center justify-center">
+            <div className="absolute inset-3 rounded-xl overflow-hidden bg-(--bg-panel) rotate-3 group-hover:rotate-0 transition-all duration-500 border border-(--border-soft) shadow-2xl flex items-center justify-center">
               <img
                 id="hero-sugam-avatar"
                 src="/assets/sugam.png"
@@ -220,12 +220,12 @@ export default function Hero() {
               />
 
               {/* Tech overlay grid */}
-              <div className="absolute inset-0 bg-gradient-to-t from-[#05060F] via-transparent to-transparent opacity-40" />
+              <div className="absolute inset-0 bg-gradient-to-t from-(--bg-base) via-transparent to-transparent opacity-40" />
               
               {/* Subtle Tech scanner line or watermark */}
-              <div className="absolute bottom-4 left-4 flex items-center gap-2 px-2.5 py-1 rounded bg-[#080916]/80 backdrop-blur border border-white/10 text-[10px] font-mono text-neutral-400 tracking-wider">
+              <div className="absolute bottom-4 left-4 flex items-center gap-2 px-2.5 py-1 rounded bg-(--bg-header)/80 backdrop-blur border border-(--border-soft) text-[10px] font-mono text-(--text-muted) tracking-wider">
                 <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
-                <span>SUGAM_KANDEL_PORTRAIT.IMG</span>
+                <span>Sugam_Kandel_Portrait.IMG</span>
               </div>
             </div>
           </div>

@@ -25,7 +25,7 @@ function PageLayout({ children }: { children: React.ReactNode }) {
         <Link
           id="back-to-hub-link"
           to="/"
-          className="inline-flex items-center gap-2 text-xs font-mono text-cyan-400 hover:text-white transition-colors group bg-white/5 border border-white/10 px-4 py-2 rounded-lg"
+          className="inline-flex items-center gap-2 text-xs font-mono text-cyan-400 hover:text-(--text-primary) transition-colors group bg-(--bg-chip) border border-(--border-soft) px-4 py-2 rounded-lg"
         >
           <ArrowLeft className="w-3.5 h-3.5 group-hover:-translate-x-1 transition-transform text-cyan-400" />
           <span className="font-bold tracking-wider capitalize">← Return to Main Hub</span>
@@ -64,7 +64,7 @@ export default function App() {
       {/* Per-route SEO: unique title, canonical, description, OG & Twitter meta */}
       <SEOHelper />
 
-      <div className="min-h-screen bg-[#05060F] text-white font-sans antialiased selection:bg-cyan-500/30 selection:text-white relative">
+      <div className="min-h-screen bg-(--bg-base) text-(--text-primary) font-sans antialiased selection:bg-cyan-500/30 selection:text-white relative">
         {/* Dynamic Grid Background Overlay */}
         <div className="fixed inset-0 bg-dark-grid opacity-10 pointer-events-none z-0" />
 

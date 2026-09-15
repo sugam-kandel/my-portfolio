@@ -17,28 +17,28 @@ export default function Footer() {
   };
 
   return (
-    <footer id="footer-section" className="bg-[#04050D] border-t border-white/5 pt-20 pb-8 relative overflow-hidden">
+    <footer id="footer-section" className="bg-(--bg-footer) border-t border-(--border-subtle) pt-20 pb-8 relative overflow-hidden">
       {/* Background glow node */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-96 h-96 bg-cyan-500/5 rounded-full blur-[100px] pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-6 relative z-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 pb-16 border-b border-white/5">
+      <div className="max-w-7xl mx-auto px-6 relative z-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 pb-16 border-b border-(--border-subtle)">
         
         {/* Column 1 - Brand Profile */}
         <div className="lg:col-span-4 space-y-6">
           <Link
             id="footer-logo-link"
             to="/"
-            className="flex items-center gap-2 text-white font-display font-bold tracking-widest text-lg group cursor-pointer inline-flex"
+            className="flex items-center gap-2 text-(--text-primary) font-display font-bold tracking-widest text-lg group cursor-pointer inline-flex"
           >
             <div className="w-9 h-9 rounded bg-gradient-to-tr from-cyan-400 to-blue-600 flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform">
-              <Code className="w-5 h-5 text-white" />
+              <Code className="w-5 h-5 text-(--text-primary)" />
             </div>
             <span className="bg-gradient-to-r from-white via-neutral-200 to-neutral-400 bg-clip-text text-transparent capitalize">
-              SUGAM KANDEL
+              Sugam Kandel
             </span>
           </Link>
 
-          <p className="text-neutral-400 text-xs leading-relaxed font-light">
+          <p className="text-(--text-muted) text-xs leading-relaxed font-light">
             A high-school Computer Science student pursuing coding, mechanical research, and geographical adventures. Combining logic and wheels to explore the digital and physical landscapes.
           </p>
 
@@ -49,7 +49,7 @@ export default function Footer() {
               href="https://github.com/sugam-kandel"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-8 h-8 rounded bg-white/5 hover:bg-cyan-500 hover:text-black hover:scale-105 transition-all flex items-center justify-center text-neutral-400"
+              className="w-8 h-8 rounded bg-(--bg-chip) hover:bg-cyan-500 hover:text-black hover:scale-105 transition-all flex items-center justify-center text-(--text-muted)"
             >
               <Github className="w-4 h-4" />
             </a>
@@ -58,7 +58,7 @@ export default function Footer() {
               href="https://www.instagram.com/suga.m7606"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-8 h-8 rounded bg-white/5 hover:bg-cyan-500 hover:text-black hover:scale-105 transition-all flex items-center justify-center text-neutral-400"
+              className="w-8 h-8 rounded bg-(--bg-chip) hover:bg-cyan-500 hover:text-black hover:scale-105 transition-all flex items-center justify-center text-(--text-muted)"
             >
               <Instagram className="w-4 h-4" />
             </a>
@@ -67,7 +67,7 @@ export default function Footer() {
               href="https://www.youtube.com/@NJPLSMST"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-8 h-8 rounded bg-white/5 hover:bg-cyan-500 hover:text-black hover:scale-105 transition-all flex items-center justify-center text-neutral-400"
+              className="w-8 h-8 rounded bg-(--bg-chip) hover:bg-cyan-500 hover:text-black hover:scale-105 transition-all flex items-center justify-center text-(--text-muted)"
             >
               <Youtube className="w-4 h-4" />
             </a>
@@ -76,8 +76,8 @@ export default function Footer() {
 
         {/* Column 2 - Quick Links */}
         <div className="lg:col-span-2.5 space-y-6">
-          <h4 className="text-xs font-display font-bold text-white capitalize tracking-widest relative pb-2 border-b border-white/5">
-            WHO WE ARE
+          <h4 className="text-xs font-display font-bold text-(--text-primary) capitalize tracking-widest relative pb-2 border-b border-(--border-subtle)">
+            Who We Are
           </h4>
           <ul className="space-y-3">
             {[
@@ -93,7 +93,7 @@ export default function Footer() {
                 <Link
                   id={`footer-nav-link-${idx}`}
                   to={link.path}
-                  className="text-xs text-neutral-400 hover:text-cyan-400 hover:translate-x-1 transition-all text-left cursor-pointer block"
+                  className="text-xs text-(--text-muted) hover:text-cyan-400 hover:translate-x-1 transition-all text-left cursor-pointer block"
                 >
                   {link.label}
                 </Link>
@@ -104,8 +104,8 @@ export default function Footer() {
 
         {/* Column 3 - My Passions */}
         <div className="lg:col-span-2.5 space-y-6">
-          <h4 className="text-xs font-display font-bold text-white capitalize tracking-widest relative pb-2 border-b border-white/5">
-            OUR WORK
+          <h4 className="text-xs font-display font-bold text-(--text-primary) capitalize tracking-widest relative pb-2 border-b border-(--border-subtle)">
+            Our Work
           </h4>
           <ul className="space-y-3">
             {[
@@ -118,7 +118,7 @@ export default function Footer() {
                 <Link
                   id={`footer-passion-link-${idx}`}
                   to="/passions"
-                  className="text-xs text-neutral-400 hover:text-pink-400 hover:translate-x-1 transition-all text-left cursor-pointer block"
+                  className="text-xs text-(--text-muted) hover:text-pink-400 hover:translate-x-1 transition-all text-left cursor-pointer block"
                 >
                   {work.label}
                 </Link>
@@ -129,15 +129,15 @@ export default function Footer() {
 
         {/* Column 4 - Newsletter */}
         <div className="lg:col-span-3 space-y-6">
-          <h4 className="text-xs font-display font-bold text-white capitalize tracking-widest relative pb-2 border-b border-white/5">
-            NEWSLETTER
+          <h4 className="text-xs font-display font-bold text-(--text-primary) capitalize tracking-widest relative pb-2 border-b border-(--border-subtle)">
+            Newsletter
           </h4>
-          <p className="text-neutral-400 text-xs leading-relaxed font-light">
+          <p className="text-(--text-muted) text-xs leading-relaxed font-light">
             Subscribe to get notified whenever I release a new coding tutorial, blog post, or motorcycle specs analysis.
           </p>
 
           <form onSubmit={handleSubscribe} className="space-y-3">
-            <div className="relative flex items-center border-b border-white/20 focus-within:border-cyan-400 transition-colors py-1.5">
+            <div className="relative flex items-center border-b border-(--border-mid) focus-within:border-cyan-400 transition-colors py-1.5">
               <input
                 id="footer-newsletter-email"
                 type="email"
@@ -145,12 +145,12 @@ export default function Footer() {
                 value={newsEmail}
                 onChange={(e) => setNewsEmail(e.target.value)}
                 placeholder="Email Address"
-                className="w-full bg-transparent text-xs text-white placeholder-neutral-600 focus:outline-none py-1 font-sans"
+                className="w-full bg-transparent text-xs text-(--text-primary) placeholder-(--text-dim) focus:outline-none py-1 font-sans"
               />
               <button
                 id="footer-newsletter-submit"
                 type="submit"
-                className="text-neutral-400 hover:text-cyan-400 p-1 cursor-pointer transition-colors"
+                className="text-(--text-muted) hover:text-cyan-400 p-1 cursor-pointer transition-colors"
               >
                 <Send className="w-3.5 h-3.5" />
               </button>
@@ -175,7 +175,7 @@ export default function Footer() {
       </div>
 
       {/* Copyright row */}
-      <div className="max-w-7xl mx-auto px-6 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-[11px] font-mono text-neutral-500">
+      <div className="max-w-7xl mx-auto px-6 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-[11px] font-mono text-(--text-faint)">
         <div>
           Copyright © 2026 Sugam Kandel. All rights reserved.
         </div>
