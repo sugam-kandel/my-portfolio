@@ -34,7 +34,7 @@ export default function Passions() {
         <div className="lg:col-span-4 flex flex-col justify-center space-y-6">
           <div className="space-y-2">
             <span className="text-xs font-mono font-bold tracking-[0.2em] text-cyan-400">OUR SERVICES</span>
-            <h2 className="text-3xl md:text-4xl font-display font-extrabold text-white uppercase tracking-tight">
+            <h2 className="text-3xl md:text-4xl font-display font-semibold text-white capitalize tracking-tight">
               WHAT I DO &<br />
               <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">WHAT I LOVE</span>
             </h2>
@@ -49,7 +49,7 @@ export default function Passions() {
             <button
               id="view-all-passions-btn"
               onClick={() => setSelectedPassion(PASSIONS[0])}
-              className="group inline-flex items-center gap-3 text-xs font-display font-bold tracking-widest text-cyan-400 hover:text-white uppercase transition-colors py-2 cursor-pointer"
+              className="group inline-flex items-center gap-3 text-xs font-display font-bold tracking-widest text-cyan-400 hover:text-white capitalize transition-colors py-2 cursor-pointer"
             >
               <span>Explore My Coding Specs</span>
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1.5 transition-transform" />
@@ -143,7 +143,7 @@ export default function Passions() {
                     </div>
                   </div>
                   <div>
-                    <span className="text-[10px] font-mono tracking-widest text-cyan-400 uppercase">My Passion Insights</span>
+                    <span className="text-[10px] font-mono tracking-widest text-cyan-400 capitalize">My Passion Insights</span>
                     <h3 className="text-xl font-display font-bold text-white">{selectedPassion.title}</h3>
                   </div>
                 </div>
@@ -157,7 +157,7 @@ export default function Passions() {
                   </div>
 
                   <div className="space-y-2">
-                    <h4 className="text-xs font-mono font-bold uppercase text-neutral-400 tracking-wider">Deep Dive</h4>
+                    <h4 className="text-xs font-mono font-bold capitalize text-neutral-400 tracking-wider">Deep Dive</h4>
                     <p className="text-neutral-300 text-xs leading-relaxed font-light">
                       {selectedPassion.detail}
                     </p>

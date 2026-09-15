@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Github, Twitter, Youtube, Instagram, Code } from 'lucide-react';
+import { Menu, X, Github, Youtube, Instagram, Code } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Link, useLocation } from 'react-router-dom';
 
@@ -89,7 +89,7 @@ export default function Header() {
         <div className="hidden lg:flex items-center gap-5">
           <a
             id="social-github"
-            href="https://github.com"
+            href="https://github.com/sugam-kandel"
             target="_blank"
             rel="noopener noreferrer"
             className="text-neutral-400 hover:text-cyan-400 hover:scale-110 transition-all duration-200"
@@ -97,17 +97,8 @@ export default function Header() {
             <Github className="w-4 h-4" />
           </a>
           <a
-            id="social-twitter"
-            href="https://twitter.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-neutral-400 hover:text-cyan-400 hover:scale-110 transition-all duration-200"
-          >
-            <Twitter className="w-4 h-4" />
-          </a>
-          <a
             id="social-instagram"
-            href="https://instagram.com"
+            href="https://www.instagram.com/suga.m7606"
             target="_blank"
             rel="noopener noreferrer"
             className="text-neutral-400 hover:text-cyan-400 hover:scale-110 transition-all duration-200"
@@ -116,7 +107,7 @@ export default function Header() {
           </a>
           <a
             id="social-youtube"
-            href="https://youtube.com"
+            href="https://www.youtube.com/@NJPLSMST"
             target="_blank"
             rel="noopener noreferrer"
             className="text-neutral-400 hover:text-cyan-400 hover:scale-110 transition-all duration-200"
@@ -164,7 +155,7 @@ export default function Header() {
               <div className="flex items-center gap-6 py-4 justify-center">
                 <a
                   id="mobile-social-github"
-                  href="https://github.com"
+                  href="https://github.com/sugam-kandel"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-neutral-400 hover:text-cyan-400"
@@ -172,17 +163,8 @@ export default function Header() {
                   <Github className="w-5 h-5" />
                 </a>
                 <a
-                  id="mobile-social-twitter"
-                  href="https://twitter.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-neutral-400 hover:text-cyan-400"
-                >
-                  <Twitter className="w-5 h-5" />
-                </a>
-                <a
                   id="mobile-social-instagram"
-                  href="https://instagram.com"
+                  href="https://www.instagram.com/suga.m7606"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-neutral-400 hover:text-cyan-400"
@@ -191,7 +173,7 @@ export default function Header() {
                 </a>
                 <a
                   id="mobile-social-youtube"
-                  href="https://youtube.com"
+                  href="https://www.youtube.com/@NJPLSMST"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-neutral-400 hover:text-cyan-400"

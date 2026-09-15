@@ -11,6 +11,7 @@ import Blog from './components/Blog';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
+import SEOHelper from './components/SEOHelper';
 
 // A high-contrast, beautiful layout wrapper for standalone pages
 function PageLayout({ children }: { children: React.ReactNode }) {
@@ -27,7 +28,7 @@ function PageLayout({ children }: { children: React.ReactNode }) {
           className="inline-flex items-center gap-2 text-xs font-mono text-cyan-400 hover:text-white transition-colors group bg-white/5 border border-white/10 px-4 py-2 rounded-lg"
         >
           <ArrowLeft className="w-3.5 h-3.5 group-hover:-translate-x-1 transition-transform text-cyan-400" />
-          <span className="font-bold tracking-wider uppercase">← Return to Main Hub</span>
+          <span className="font-bold tracking-wider capitalize">← Return to Main Hub</span>
         </Link>
       </div>
       
@@ -59,6 +60,9 @@ export default function App() {
     <Router>
       {/* Scroll restore helper on navigation */}
       <ScrollToTop />
+
+      {/* Per-route SEO: unique title, canonical, description, OG & Twitter meta */}
+      <SEOHelper />
 
       <div className="min-h-screen bg-[#05060F] text-white font-sans antialiased selection:bg-cyan-500/30 selection:text-white relative">
         {/* Dynamic Grid Background Overlay */}

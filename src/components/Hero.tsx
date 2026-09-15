@@ -81,7 +81,7 @@ export default function Hero() {
               <h1 className="sr-only">Sugam Kandel | Portfolio - CS Student &amp; Software Developer</h1>
 
               {/* Slide Heading */}
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-extrabold text-white leading-tight uppercase">
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-semibold text-white leading-tight capitalize">
                 {currentSlide.title} <br />
                 <span className={`bg-gradient-to-r ${activeSlide === 0 ? 'from-cyan-400 to-blue-500' : activeSlide === 1 ? 'from-pink-400 to-rose-500' : 'from-purple-400 to-indigo-500'} bg-clip-text text-transparent`}>
                   {currentSlide.headingHighlight}
@@ -214,7 +214,7 @@ export default function Hero() {
               <img
                 id="hero-sugam-avatar"
                 src="/assets/sugam.png"
-                alt="Sugam Kandel Portrait"
+                alt="Sugam Kandel - Computer Science student and developer from Butwal, Nepal"
                 referrerPolicy="no-referrer"
                 className="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-500 scale-105 group-hover:scale-100"
               />

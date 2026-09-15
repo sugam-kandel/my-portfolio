@@ -62,7 +62,7 @@ export default function Journey() {
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
           <div className="space-y-2">
             <span className="text-xs font-mono font-bold tracking-[0.2em] text-cyan-400">MY MILESTONES</span>
-            <h2 className="text-3xl md:text-4xl font-display font-extrabold text-white uppercase tracking-tight">
+            <h2 className="text-3xl md:text-4xl font-display font-semibold text-white capitalize tracking-tight">
               PORTFOLIO & <br />
               <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">LIFE JOURNEY</span>
             </h2>
@@ -76,7 +76,7 @@ export default function Journey() {
                 id={`journey-filter-btn-${tab.id}`}
                 key={tab.id}
                 onClick={() => setFilter(tab.id as any)}
-                className={`px-4 py-2 rounded text-[10px] font-display font-bold tracking-widest uppercase transition-all cursor-pointer ${
+                className={`px-4 py-2 rounded text-[10px] font-display font-bold tracking-widest capitalize transition-all cursor-pointer ${
                   filter === tab.id
                     ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg'
                     : 'text-neutral-400 hover:text-white'
@@ -112,6 +112,7 @@ export default function Journey() {
                     id={`journey-img-${item.id}`}
                     src={item.image}
                     alt={item.title}
+                    loading="lazy"
                     referrerPolicy="no-referrer"
                     className="w-full h-full object-cover transition-transform duration-700 scale-100 group-hover:scale-105"
                   />
@@ -121,12 +122,12 @@ export default function Journey() {
 
                   {/* Top tags */}
                   <div className="absolute top-4 left-4 flex items-center gap-2">
-                    <span className="px-2 py-1 rounded bg-[#080916]/90 backdrop-blur border border-white/10 text-[9px] font-mono font-bold tracking-wider text-white uppercase flex items-center gap-1.5 shadow-lg">
+                    <span className="px-2 py-1 rounded bg-[#080916]/90 backdrop-blur border border-white/10 text-[9px] font-mono font-bold tracking-wider text-white capitalize flex items-center gap-1.5 shadow-lg">
                       {getCategoryIcon(item.category)}
                       {item.category}
                     </span>
                     {item.tag && (
-                      <span className="px-2 py-1 rounded bg-cyan-500/10 backdrop-blur border border-cyan-500/20 text-[9px] font-mono font-bold tracking-wider text-cyan-400 uppercase">
+                      <span className="px-2 py-1 rounded bg-cyan-500/10 backdrop-blur border border-cyan-500/20 text-[9px] font-mono font-bold tracking-wider text-cyan-400 capitalize">
                         {item.tag}
                       </span>
                     )}
@@ -204,6 +205,7 @@ export default function Journey() {
                   id="journey-modal-hero-img"
                   src={selectedItem.image}
                   alt={selectedItem.title}
+                  loading="lazy"
                   referrerPolicy="no-referrer"
                   className="w-full h-full object-cover"
                 />
@@ -212,11 +214,11 @@ export default function Journey() {
                 {/* Banner titles */}
                 <div className="absolute bottom-6 left-6 right-6 flex flex-wrap items-end justify-between gap-4">
                   <div className="space-y-1">
-                    <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-[#080916]/90 backdrop-blur border border-white/10 text-[10px] font-mono font-bold tracking-wider text-white uppercase shadow-lg">
+                    <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-[#080916]/90 backdrop-blur border border-white/10 text-[10px] font-mono font-bold tracking-wider text-white capitalize shadow-lg">
                       {getCategoryIcon(selectedItem.category)}
                       {selectedItem.category}
                     </span>
-                    <h3 className="text-2xl font-display font-extrabold text-white uppercase drop-shadow-md">
+                    <h3 className="text-2xl font-display font-semibold text-white capitalize drop-shadow-md">
                       {selectedItem.title}
                     </h3>
                   </div>
@@ -227,7 +229,7 @@ export default function Journey() {
               <div className="p-8 space-y-6">
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-4 border-b border-white/5 pb-6">
                   <div>
-                    <span className="block text-[10px] font-mono text-neutral-500 uppercase">Timeline</span>
+                    <span className="block text-[10px] font-mono text-neutral-500 capitalize">Timeline</span>
                     <span className="text-xs font-display font-semibold text-neutral-200 flex items-center gap-1 mt-1">
                       <Calendar className="w-3.5 h-3.5 text-cyan-400" />
                       {selectedItem.date}
@@ -235,7 +237,7 @@ export default function Journey() {
                   </div>
                   {selectedItem.location && (
                     <div>
-                      <span className="block text-[10px] font-mono text-neutral-500 uppercase">Location</span>
+                      <span className="block text-[10px] font-mono text-neutral-500 capitalize">Location</span>
                       <span className="text-xs font-display font-semibold text-neutral-200 flex items-center gap-1 mt-1">
                         <MapPin className="w-3.5 h-3.5 text-pink-400" />
                         {selectedItem.location}
@@ -243,7 +245,7 @@ export default function Journey() {
                     </div>
                   )}
                   <div className="col-span-2 md:col-span-1">
-                    <span className="block text-[10px] font-mono text-neutral-500 uppercase">Status</span>
+                    <span className="block text-[10px] font-mono text-neutral-500 capitalize">Status</span>
                     <span className="text-xs font-display font-semibold text-neutral-200 flex items-center gap-1 mt-1">
                       <span className="w-2 h-2 rounded-full bg-emerald-500" />
                       Successfully Logged
@@ -252,7 +254,7 @@ export default function Journey() {
                 </div>
 
                 <div className="space-y-2">
-                  <h4 className="text-xs font-mono font-bold uppercase text-neutral-400 tracking-wider">Milestone Context</h4>
+                  <h4 className="text-xs font-mono font-bold capitalize text-neutral-400 tracking-wider">Milestone Context</h4>
                   <p className="text-neutral-300 text-sm leading-relaxed font-light">
                     {selectedItem.description}
                   </p>

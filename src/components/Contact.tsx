@@ -47,12 +47,12 @@ export default function Contact() {
           <div className="absolute inset-0 bg-dark-grid opacity-10 pointer-events-none" />
           
           <div className="space-y-4 max-w-xl relative z-10">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded bg-cyan-500/10 border border-cyan-500/20 text-xs font-mono font-bold text-cyan-400 uppercase tracking-widest">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded bg-cyan-500/10 border border-cyan-500/20 text-xs font-mono font-bold text-cyan-400 capitalize tracking-widest">
               <Sparkles className="w-3.5 h-3.5" />
               <span>Let's Collaborated</span>
             </div>
             
-            <h3 className="text-2xl md:text-3xl font-display font-black text-white uppercase leading-snug tracking-tight">
+            <h3 className="text-2xl md:text-3xl font-display font-black text-white capitalize leading-snug tracking-tight">
               FRESH IDEAS, BOLD EXPLORATIONS. <br />
               <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">CODE THE FUTURE, RIDE THE PRESENT.</span>
             </h3>
@@ -66,7 +66,7 @@ export default function Contact() {
             <a
               id="cta-email-direct"
               href="mailto:kandelsugam877@gmail.com"
-              className="group relative inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-display font-bold text-xs tracking-widest uppercase rounded shadow-lg shadow-cyan-500/15 hover:shadow-cyan-500/30 hover:scale-[1.02] transition-all"
+              className="group relative inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-display font-bold text-xs tracking-widest capitalize rounded shadow-lg shadow-cyan-500/15 hover:shadow-cyan-500/30 hover:scale-[1.02] transition-all"
             >
               <span>SEND A DIRECT EMAIL</span>
               <Send className="w-4.5 h-4.5 group-hover:translate-x-1 transition-transform" />
@@ -82,7 +82,7 @@ export default function Contact() {
             <div className="space-y-6">
               <div className="space-y-2">
                 <span className="text-xs font-mono font-bold tracking-[0.2em] text-cyan-400">CONNECT</span>
-                <h2 className="text-3xl font-display font-extrabold text-white uppercase tracking-tight">
+                <h2 className="text-3xl font-display font-semibold text-white capitalize tracking-tight">
                   GET IN TOUCH
                 </h2>
                 <div className="w-12 h-1 bg-gradient-to-r from-cyan-500 to-blue-500 rounded" />
@@ -100,7 +100,7 @@ export default function Contact() {
                   <Mail className="w-4 h-4" />
                 </div>
                 <div>
-                  <span className="block text-[9px] font-mono text-neutral-500 uppercase">My Email</span>
+                  <span className="block text-[9px] font-mono text-neutral-500 capitalize">My Email</span>
                   <a href="mailto:kandelsugam877@gmail.com" className="text-xs font-display font-bold text-white hover:text-cyan-400 transition-colors">
                     kandelsugam877@gmail.com
                   </a>
@@ -112,7 +112,7 @@ export default function Contact() {
                   <MapPin className="w-4 h-4" />
                 </div>
                 <div>
-                  <span className="block text-[9px] font-mono text-neutral-500 uppercase">Current Location</span>
+                  <span className="block text-[9px] font-mono text-neutral-500 capitalize">Current Location</span>
                   <span className="text-xs font-display font-bold text-white">
                     Sainamaina-1, Butwal, Rupandehi
                   </span>
@@ -124,7 +124,7 @@ export default function Contact() {
                   <Info className="w-4 h-4" />
                 </div>
                 <div>
-                  <span className="block text-[9px] font-mono text-neutral-500 uppercase">Academic Institution</span>
+                  <span className="block text-[9px] font-mono text-neutral-500 capitalize">Academic Institution</span>
                   <span className="text-xs font-display font-bold text-white">
                     Everest Secondary Boarding School
                   </span>
@@ -135,7 +135,7 @@ export default function Contact() {
 
           {/* Form container right */}
           <div className="lg:col-span-8 bg-[#0B0C1E]/40 border border-white/5 rounded-2xl p-8 relative">
-            <h3 className="text-base font-display font-bold text-white uppercase tracking-wider mb-6 flex items-center gap-2">
+            <h3 className="text-base font-display font-bold text-white capitalize tracking-wider mb-6 flex items-center gap-2">
               <MessageSquare className="w-4 h-4 text-cyan-400" />
               <span>SEND ME A MESSAGE</span>
             </h3>
@@ -144,7 +144,7 @@ export default function Contact() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {/* Name */}
                 <div className="space-y-2">
-                  <label htmlFor="form-name" className="block text-[10px] font-mono text-neutral-400 uppercase tracking-widest">
+                  <label htmlFor="form-name" className="block text-[10px] font-mono text-neutral-400 capitalize tracking-widest">
                     Your Name <span className="text-cyan-400">*</span>
                   </label>
                   <input
@@ -160,7 +160,7 @@ export default function Contact() {
 
                 {/* Email */}
                 <div className="space-y-2">
-                  <label htmlFor="form-email" className="block text-[10px] font-mono text-neutral-400 uppercase tracking-widest">
+                  <label htmlFor="form-email" className="block text-[10px] font-mono text-neutral-400 capitalize tracking-widest">
                     Your Email <span className="text-cyan-400">*</span>
                   </label>
                   <input
@@ -177,7 +177,7 @@ export default function Contact() {
 
               {/* Subject */}
               <div className="space-y-2">
-                <label htmlFor="form-subject" className="block text-[10px] font-mono text-neutral-400 uppercase tracking-widest">
+                <label htmlFor="form-subject" className="block text-[10px] font-mono text-neutral-400 capitalize tracking-widest">
                   Subject
                 </label>
                 <input
@@ -193,7 +193,7 @@ export default function Contact() {
 
               {/* Message */}
               <div className="space-y-2">
-                <label htmlFor="form-message" className="block text-[10px] font-mono text-neutral-400 uppercase tracking-widest">
+                <label htmlFor="form-message" className="block text-[10px] font-mono text-neutral-400 capitalize tracking-widest">
                   Your Message <span className="text-cyan-400">*</span>
                 </label>
                 <textarea
@@ -242,7 +242,7 @@ export default function Contact() {
                   id="form-submit-btn"
                   type="submit"
                   disabled={status === 'loading'}
-                  className="group relative inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-display font-bold text-xs tracking-widest uppercase rounded shadow-lg shadow-cyan-500/15 disabled:opacity-55 transition-all cursor-pointer"
+                  className="group relative inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-display font-bold text-xs tracking-widest capitalize rounded shadow-lg shadow-cyan-500/15 disabled:opacity-55 transition-all cursor-pointer"
                 >
                   {status === 'loading' ? (
                     <div className="flex items-center gap-2">

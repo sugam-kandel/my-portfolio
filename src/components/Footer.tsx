@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Github, Twitter, Instagram, Youtube, Send, Code, Heart, CheckCircle } from 'lucide-react';
+import { Github, Instagram, Youtube, Send, Code, Heart, CheckCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function Footer() {
@@ -33,7 +33,7 @@ export default function Footer() {
             <div className="w-9 h-9 rounded bg-gradient-to-tr from-cyan-400 to-blue-600 flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform">
               <Code className="w-5 h-5 text-white" />
             </div>
-            <span className="bg-gradient-to-r from-white via-neutral-200 to-neutral-400 bg-clip-text text-transparent uppercase">
+            <span className="bg-gradient-to-r from-white via-neutral-200 to-neutral-400 bg-clip-text text-transparent capitalize">
               SUGAM KANDEL
             </span>
           </Link>
@@ -46,7 +46,7 @@ export default function Footer() {
           <div className="flex items-center gap-4 pt-2">
             <a
               id="footer-social-github"
-              href="https://github.com"
+              href="https://github.com/sugam-kandel"
               target="_blank"
               rel="noopener noreferrer"
               className="w-8 h-8 rounded bg-white/5 hover:bg-cyan-500 hover:text-black hover:scale-105 transition-all flex items-center justify-center text-neutral-400"
@@ -54,17 +54,8 @@ export default function Footer() {
               <Github className="w-4 h-4" />
             </a>
             <a
-              id="footer-social-twitter"
-              href="https://twitter.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-8 h-8 rounded bg-white/5 hover:bg-cyan-500 hover:text-black hover:scale-105 transition-all flex items-center justify-center text-neutral-400"
-            >
-              <Twitter className="w-4 h-4" />
-            </a>
-            <a
               id="footer-social-instagram"
-              href="https://instagram.com"
+              href="https://www.instagram.com/suga.m7606"
               target="_blank"
               rel="noopener noreferrer"
               className="w-8 h-8 rounded bg-white/5 hover:bg-cyan-500 hover:text-black hover:scale-105 transition-all flex items-center justify-center text-neutral-400"
@@ -73,7 +64,7 @@ export default function Footer() {
             </a>
             <a
               id="footer-social-youtube"
-              href="https://youtube.com"
+              href="https://www.youtube.com/@NJPLSMST"
               target="_blank"
               rel="noopener noreferrer"
               className="w-8 h-8 rounded bg-white/5 hover:bg-cyan-500 hover:text-black hover:scale-105 transition-all flex items-center justify-center text-neutral-400"
@@ -85,7 +76,7 @@ export default function Footer() {
 
         {/* Column 2 - Quick Links */}
         <div className="lg:col-span-2.5 space-y-6">
-          <h4 className="text-xs font-display font-bold text-white uppercase tracking-widest relative pb-2 border-b border-white/5">
+          <h4 className="text-xs font-display font-bold text-white capitalize tracking-widest relative pb-2 border-b border-white/5">
             WHO WE ARE
           </h4>
           <ul className="space-y-3">
@@ -113,7 +104,7 @@ export default function Footer() {
 
         {/* Column 3 - My Passions */}
         <div className="lg:col-span-2.5 space-y-6">
-          <h4 className="text-xs font-display font-bold text-white uppercase tracking-widest relative pb-2 border-b border-white/5">
+          <h4 className="text-xs font-display font-bold text-white capitalize tracking-widest relative pb-2 border-b border-white/5">
             OUR WORK
           </h4>
           <ul className="space-y-3">
@@ -138,7 +129,7 @@ export default function Footer() {
 
         {/* Column 4 - Newsletter */}
         <div className="lg:col-span-3 space-y-6">
-          <h4 className="text-xs font-display font-bold text-white uppercase tracking-widest relative pb-2 border-b border-white/5">
+          <h4 className="text-xs font-display font-bold text-white capitalize tracking-widest relative pb-2 border-b border-white/5">
             NEWSLETTER
           </h4>
           <p className="text-neutral-400 text-xs leading-relaxed font-light">

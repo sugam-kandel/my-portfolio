@@ -18,7 +18,7 @@ export default function Blog() {
         {/* Section Header */}
         <div className="text-center space-y-2 mb-16 max-w-xl mx-auto">
           <span className="text-xs font-mono font-bold tracking-[0.2em] text-cyan-400">OUR BLOG</span>
-          <h2 className="text-3xl md:text-4xl font-display font-extrabold text-white uppercase tracking-tight">
+          <h2 className="text-3xl md:text-4xl font-display font-semibold text-white capitalize tracking-tight">
             BLOG UPDATES & <br />
             <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">MY PERSPECTIVES</span>
           </h2>
@@ -59,7 +59,7 @@ export default function Blog() {
                 </div>
 
                 {/* Post Title */}
-                <h3 className="text-base md:text-lg font-display font-bold text-white group-hover:text-cyan-400 transition-colors uppercase leading-snug tracking-tight line-clamp-2">
+                <h3 className="text-base md:text-lg font-display font-bold text-white group-hover:text-cyan-400 transition-colors capitalize leading-snug tracking-tight line-clamp-2">
                   {post.title}
                 </h3>
 
@@ -71,11 +71,11 @@ export default function Blog() {
 
               {/* Action Button Link */}
               <div className="mt-8 pt-4 border-t border-white/5 flex items-center justify-between">
-                <span className="text-[10px] font-mono text-neutral-400 uppercase tracking-widest">
+                <span className="text-[10px] font-mono text-neutral-400 capitalize tracking-widest">
                   {post.category} • {post.readTime}
                 </span>
                 
-                <span className="text-xs font-display font-bold text-cyan-400 group-hover:text-white transition-colors flex items-center gap-1 uppercase tracking-widest">
+                <span className="text-xs font-display font-bold text-cyan-400 group-hover:text-white transition-colors flex items-center gap-1 capitalize tracking-widest">
                   <span>Read More</span>
                   <ArrowRight className="w-4.5 h-4.5 group-hover:translate-x-1.5 transition-transform" />
                 </span>
@@ -121,7 +121,7 @@ export default function Blog() {
               <div className="p-8 space-y-6">
                 <div className="space-y-3">
                   <div className="flex flex-wrap items-center gap-4 text-xs font-mono text-neutral-400">
-                    <span className="px-2 py-0.5 rounded bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 uppercase">
+                    <span className="px-2 py-0.5 rounded bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 capitalize">
                       {selectedPost.category}
                     </span>
                     <span className="flex items-center gap-1.5">
@@ -134,7 +134,7 @@ export default function Blog() {
                     </span>
                   </div>
 
-                  <h3 className="text-xl md:text-2xl font-display font-extrabold text-white uppercase tracking-tight leading-tight">
+                  <h3 className="text-xl md:text-2xl font-display font-semibold text-white capitalize tracking-tight leading-tight">
                     {selectedPost.title}
                   </h3>
                 </div>

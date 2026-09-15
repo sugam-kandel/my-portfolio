@@ -27,7 +27,7 @@ export default function Stats() {
         {/* Section Header */}
         <div className="text-center space-y-2 mb-16 max-w-xl">
           <span className="text-xs font-mono font-bold tracking-[0.2em] text-cyan-400">BY THE NUMBERS</span>
-          <h2 className="text-3xl md:text-4xl font-display font-extrabold text-white uppercase tracking-tight">
+          <h2 className="text-3xl md:text-4xl font-display font-semibold text-white capitalize tracking-tight">
             MY PERSONAL <br />
             <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">INSIGHTS & SPECS</span>
           </h2>
@@ -62,7 +62,7 @@ export default function Stats() {
               <div className="-rotate-45 text-center flex flex-col items-center justify-center p-4">
                 {getIcon(STATS[3].iconName, 'w-6 h-6 text-cyan-400 mb-1')}
                 <span className="font-display font-black text-white text-lg leading-none tracking-tight">{STATS[3].value}</span>
-                <span className="font-mono text-[8px] text-neutral-400 tracking-wider uppercase mt-1">{STATS[3].label}</span>
+                <span className="font-mono text-[8px] text-neutral-400 tracking-wider capitalize mt-1">{STATS[3].label}</span>
               </div>
             </motion.div>
           </div>
@@ -79,7 +79,7 @@ export default function Stats() {
               <div className="-rotate-45 text-center flex flex-col items-center justify-center p-4">
                 {getIcon(STATS[0].iconName, 'w-6 h-6 text-emerald-400 mb-1')}
                 <span className="font-display font-black text-white text-lg leading-none tracking-tight">{STATS[0].value}</span>
-                <span className="font-mono text-[8px] text-neutral-400 tracking-wider uppercase mt-1">{STATS[0].label}</span>
+                <span className="font-mono text-[8px] text-neutral-400 tracking-wider capitalize mt-1">{STATS[0].label}</span>
               </div>
             </motion.div>
           </div>
@@ -96,7 +96,7 @@ export default function Stats() {
               <div className="-rotate-45 text-center flex flex-col items-center justify-center p-4">
                 {getIcon(STATS[1].iconName, 'w-6 h-6 text-pink-400 mb-1')}
                 <span className="font-display font-black text-white text-lg leading-none tracking-tight">{STATS[1].value}</span>
-                <span className="font-mono text-[8px] text-neutral-400 tracking-wider uppercase mt-1">{STATS[1].label}</span>
+                <span className="font-mono text-[8px] text-neutral-400 tracking-wider capitalize mt-1">{STATS[1].label}</span>
               </div>
             </motion.div>
           </div>
@@ -113,13 +113,13 @@ export default function Stats() {
               <div className="-rotate-45 text-center flex flex-col items-center justify-center p-4">
                 {getIcon(STATS[2].iconName, 'w-6 h-6 text-purple-400 mb-1')}
                 <span className="font-display font-black text-white text-lg leading-none tracking-tight">{STATS[2].value}</span>
-                <span className="font-mono text-[8px] text-neutral-400 tracking-wider uppercase mt-1">{STATS[2].label}</span>
+                <span className="font-mono text-[8px] text-neutral-400 tracking-wider capitalize mt-1">{STATS[2].label}</span>
               </div>
             </motion.div>
           </div>
 
           {/* Core watermark text center */}
-          <div className="absolute text-[10px] font-mono tracking-widest text-neutral-600 uppercase pointer-events-none text-center">
+          <div className="absolute text-[10px] font-mono tracking-widest text-neutral-600 capitalize pointer-events-none text-center">
             CORE METRICS<br />
             <span className="text-cyan-400 font-bold">SUGAM_K</span>
           </div>
@@ -148,7 +148,7 @@ export default function Stats() {
               </div>
               <div className="space-y-1">
                 <span className="block font-display font-black text-white text-xl">{stat.value}</span>
-                <span className="block font-mono text-[9px] text-neutral-400 tracking-wider uppercase">{stat.label}</span>
+                <span className="block font-mono text-[9px] text-neutral-400 tracking-wider capitalize">{stat.label}</span>
               </div>
               <p className="text-neutral-500 text-[10px] leading-tight font-light pt-1 border-t border-white/5 w-full">
                 {stat.description}

@@ -55,7 +55,7 @@ export default function Education() {
         <div className="lg:col-span-5 space-y-6">
           <div className="space-y-2">
             <span className="text-xs font-mono font-bold tracking-[0.2em] text-cyan-400">MY ACADEMICS</span>
-            <h2 className="text-3xl md:text-4xl font-display font-extrabold text-white uppercase tracking-tight">
+            <h2 className="text-3xl md:text-4xl font-display font-semibold text-white capitalize tracking-tight">
               EDUCATION &<br />
               <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">MY FOUNDATIONS</span>
             </h2>
@@ -68,7 +68,7 @@ export default function Education() {
 
           {/* Core Skills Summary Badge */}
           <div className="p-6 bg-[#0B0C1E]/50 border border-white/5 rounded-xl space-y-3 shadow-lg">
-            <h3 className="text-xs font-mono font-bold text-white tracking-widest uppercase flex items-center gap-2">
+            <h3 className="text-xs font-mono font-bold text-white tracking-widest capitalize flex items-center gap-2">
               <Building className="w-4 h-4 text-cyan-400" />
               <span>Current Status</span>
             </h3>
@@ -110,7 +110,7 @@ export default function Education() {
                   <div className="space-y-3">
                     {/* Badge */}
                     <div className="flex flex-wrap gap-2 items-center">
-                      <span className={`px-2 py-0.5 rounded text-[9px] font-mono font-bold tracking-wider uppercase border ${item.badgeColor}`}>
+                      <span className={`px-2 py-0.5 rounded text-[9px] font-mono font-bold tracking-wider capitalize border ${item.badgeColor}`}>
                         {item.level}
                       </span>
                       <span className="text-neutral-500 text-[10px] font-mono">
@@ -118,7 +118,7 @@ export default function Education() {
                       </span>
                     </div>
 
-                    <h3 className="text-lg font-display font-bold text-white uppercase tracking-tight">
+                    <h3 className="text-lg font-display font-bold text-white capitalize tracking-tight">
                       {item.institution}
                     </h3>
 
