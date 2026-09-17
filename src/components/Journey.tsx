@@ -112,6 +112,8 @@ export default function Journey() {
                     id={`journey-img-${item.id}`}
                     src={item.image}
                     alt={item.title}
+                    width={600}
+                    height={338}
                     loading="lazy"
                     referrerPolicy="no-referrer"
                     className="w-full h-full object-cover transition-transform duration-700 scale-100 group-hover:scale-105"
@@ -205,6 +207,8 @@ export default function Journey() {
                   id="journey-modal-hero-img"
                   src={selectedItem.image}
                   alt={selectedItem.title}
+                  width={600}
+                  height={338}
                   loading="lazy"
                   referrerPolicy="no-referrer"
                   className="w-full h-full object-cover"

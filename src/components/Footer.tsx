@@ -32,8 +32,10 @@ export default function Footer() {
           >
             <img
               id="footer-logo"
-              src="/assets/fullLogo.png"
+              src="/assets/fullLogo-256.png"
               alt="Sugam Kandel"
+              width={128}
+              height={128}
               className="h-32 w-auto rounded-lg group-hover:scale-105 transition-transform"
             />
           </Link>
@@ -49,6 +51,7 @@ export default function Footer() {
               href="https://github.com/sugam-kandel"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="GitHub profile"
               className="w-8 h-8 rounded bg-(--bg-chip) hover:bg-cyan-500 hover:text-black hover:scale-105 transition-all flex items-center justify-center text-(--text-muted)"
             >
               <Github className="w-4 h-4" />
@@ -58,6 +61,7 @@ export default function Footer() {
               href="https://www.instagram.com/suga.m7606"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Instagram profile"
               className="w-8 h-8 rounded bg-(--bg-chip) hover:bg-cyan-500 hover:text-black hover:scale-105 transition-all flex items-center justify-center text-(--text-muted)"
             >
               <Instagram className="w-4 h-4" />
@@ -67,6 +71,7 @@ export default function Footer() {
               href="https://www.youtube.com/@NJPLSMST"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="YouTube channel"
               className="w-8 h-8 rounded bg-(--bg-chip) hover:bg-cyan-500 hover:text-black hover:scale-105 transition-all flex items-center justify-center text-(--text-muted)"
             >
               <Youtube className="w-4 h-4" />
@@ -76,6 +81,7 @@ export default function Footer() {
               href="https://www.facebook.com/sugam.kandel.71112"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Facebook profile"
               className="w-8 h-8 rounded bg-(--bg-chip) hover:bg-cyan-500 hover:text-black hover:scale-105 transition-all flex items-center justify-center text-(--text-muted)"
             >
               <Facebook className="w-4 h-4" />
@@ -85,6 +91,7 @@ export default function Footer() {
               href="https://x.com/kadelsugam"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="X (Twitter) profile"
               className="w-8 h-8 rounded bg-(--bg-chip) hover:bg-cyan-500 hover:text-black hover:scale-105 transition-all flex items-center justify-center text-(--text-muted)"
             >
               <Twitter className="w-4 h-4" />
@@ -155,7 +162,7 @@ export default function Footer() {
           </p>
 
           <form onSubmit={handleSubscribe} className="space-y-3">
-            <div className="relative flex items-center border-b border-(--border-mid) focus-within:border-cyan-400 transition-colors py-1.5">
+            <div className="relative flex items-center border-b border-(--border-mid) focus-within:border-cyan-400 transition-colors">
               <input
                 id="footer-newsletter-email"
                 type="email"
@@ -163,14 +170,15 @@ export default function Footer() {
                 value={newsEmail}
                 onChange={(e) => setNewsEmail(e.target.value)}
                 placeholder="Email Address"
-                className="w-full bg-transparent text-xs text-(--text-primary) placeholder-(--text-dim) focus:outline-none py-1 font-sans"
+                className="w-full bg-transparent text-xs text-(--text-primary) placeholder-(--text-dim) focus:outline-none min-h-[44px] font-sans"
               />
               <button
                 id="footer-newsletter-submit"
                 type="submit"
-                className="text-(--text-muted) hover:text-cyan-400 p-1 cursor-pointer transition-colors"
+                aria-label="Subscribe to newsletter"
+                className="text-(--text-muted) hover:text-cyan-400 p-3 -mr-2 cursor-pointer transition-colors flex items-center justify-center"
               >
-                <Send className="w-3.5 h-3.5" />
+                <Send className="w-4 h-4" />
               </button>
             </div>
 

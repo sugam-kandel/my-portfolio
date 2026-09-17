@@ -56,8 +56,10 @@ export default function Header() {
         >
           <img
             id="header-logo"
-            src="/assets/fullLogo.png"
+            src="/assets/fullLogo-256.png"
             alt="Sugam Kandel"
+            width={56}
+            height={56}
             className="h-14 w-auto rounded-lg group-hover:scale-105 transition-transform"
           />
         </Link>
@@ -94,6 +96,7 @@ export default function Header() {
             href="https://github.com/sugam-kandel"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="GitHub profile"
             className="text-(--text-muted) hover:text-cyan-400 hover:scale-110 transition-all duration-200"
           >
             <Github className="w-4 h-4" />
@@ -103,6 +106,7 @@ export default function Header() {
             href="https://www.instagram.com/suga.m7606"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Instagram profile"
             className="text-(--text-muted) hover:text-cyan-400 hover:scale-110 transition-all duration-200"
           >
             <Instagram className="w-4 h-4" />
@@ -112,6 +116,7 @@ export default function Header() {
             href="https://www.youtube.com/@NJPLSMST"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="YouTube channel"
             className="text-(--text-muted) hover:text-cyan-400 hover:scale-110 transition-all duration-200"
           >
             <Youtube className="w-4 h-4" />
@@ -121,6 +126,7 @@ export default function Header() {
             href="https://www.facebook.com/sugam.kandel.71112"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Facebook profile"
             className="text-(--text-muted) hover:text-cyan-400 hover:scale-110 transition-all duration-200"
           >
             <Facebook className="w-4 h-4" />
@@ -130,6 +136,7 @@ export default function Header() {
             href="https://x.com/kadelsugam"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="X (Twitter) profile"
             className="text-(--text-muted) hover:text-cyan-400 hover:scale-110 transition-all duration-200"
           >
             <Twitter className="w-4 h-4" />
@@ -148,6 +155,7 @@ export default function Header() {
         <button
           id="mobile-menu-toggle"
           onClick={() => setIsOpen(!isOpen)}
+          aria-label={isOpen ? 'Close navigation menu' : 'Open navigation menu'}
           className="lg:hidden text-(--text-primary) p-2 hover:bg-(--bg-chip) rounded-full transition-colors cursor-pointer"
         >
           {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -186,6 +194,7 @@ export default function Header() {
                   href="https://github.com/sugam-kandel"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="GitHub profile"
                   className="text-(--text-muted) hover:text-cyan-400"
                 >
                   <Github className="w-5 h-5" />
@@ -195,6 +204,7 @@ export default function Header() {
                   href="https://www.instagram.com/suga.m7606"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="Instagram profile"
                   className="text-(--text-muted) hover:text-cyan-400"
                 >
                   <Instagram className="w-5 h-5" />
@@ -204,6 +214,7 @@ export default function Header() {
                   href="https://www.youtube.com/@NJPLSMST"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="YouTube channel"
                   className="text-(--text-muted) hover:text-cyan-400"
                 >
                   <Youtube className="w-5 h-5" />
@@ -213,6 +224,7 @@ export default function Header() {
                   href="https://www.facebook.com/sugam.kandel.71112"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="Facebook profile"
                   className="text-(--text-muted) hover:text-cyan-400"
                 >
                   <Facebook className="w-5 h-5" />
@@ -222,6 +234,7 @@ export default function Header() {
                   href="https://x.com/kadelsugam"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="X (Twitter) profile"
                   className="text-(--text-muted) hover:text-cyan-400"
                 >
                   <Twitter className="w-5 h-5" />

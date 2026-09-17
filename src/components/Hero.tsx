@@ -78,7 +78,7 @@ export default function Hero() {
               </div>
 
               {/* Main semantic H1 for SEO */}
-              <h1 className="sr-only">Sugam Kandel | CS Student - +2 Management</h1>
+              <h1 className="sr-only">Sugam Kandel | CS Student Portfolio - +2 Management, Nepal</h1>
 
               {/* Slide Heading */}
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-semibold text-(--text-primary) leading-tight capitalize">
@@ -213,8 +213,11 @@ export default function Hero() {
             <div className="absolute inset-3 rounded-xl overflow-hidden bg-(--bg-panel) rotate-3 group-hover:rotate-0 transition-all duration-500 border border-(--border-soft) shadow-2xl flex items-center justify-center">
               <img
                 id="hero-sugam-avatar"
-                src="/assets/sugam.png"
+                src="/assets/sugam-512.jpg"
                 alt="Sugam Kandel - Computer Science student from Butwal, Nepal"
+                width={512}
+                height={683}
+                fetchPriority="high"
                 referrerPolicy="no-referrer"
                 className="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-500 scale-105 group-hover:scale-100"
               />
