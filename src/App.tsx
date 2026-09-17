@@ -28,7 +28,7 @@ function PageLayout({ children }: { children: React.ReactNode }) {
           className="inline-flex items-center gap-2 text-xs font-mono text-cyan-400 hover:text-(--text-primary) transition-colors group bg-(--bg-chip) border border-(--border-soft) px-4 py-2 rounded-lg"
         >
           <ArrowLeft className="w-3.5 h-3.5 group-hover:-translate-x-1 transition-transform text-cyan-400" />
-          <span className="font-bold tracking-wider capitalize">← Return to Main Hub</span>
+          <span className="font-bold tracking-wider capitalize">Return to Main Hub</span>
         </Link>
       </div>
       

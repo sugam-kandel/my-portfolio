@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Github, Youtube, Instagram, Code, Sun, Moon } from 'lucide-react';
+import { Menu, X, Github, Youtube, Instagram, Facebook, Twitter, Sun, Moon } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Link, useLocation } from 'react-router-dom';
 import { useTheme } from '../hooks/useTheme';
@@ -52,14 +52,14 @@ export default function Header() {
         <Link
           id="logo-link"
           to="/"
-          className="flex items-center gap-2 text-(--text-primary) font-display font-bold tracking-widest text-lg group cursor-pointer"
+          className="flex items-center group cursor-pointer"
         >
-          <div className="w-9 h-9 rounded bg-gradient-to-tr from-cyan-400 to-blue-600 flex items-center justify-center shadow-lg shadow-cyan-500/20 group-hover:scale-105 transition-transform">
-            <Code className="w-5 h-5 text-white" />
-          </div>
-          <span className="bg-gradient-to-r from-(--text-primary) via-(--text-muted) to-(--text-faint) bg-clip-text text-transparent">
-            Sugam Kandel
-          </span>
+          <img
+            id="header-logo"
+            src="/assets/fullLogo.png"
+            alt="Sugam Kandel"
+            className="h-14 w-auto rounded-lg group-hover:scale-105 transition-transform"
+          />
         </Link>
 
         {/* Desktop Navigation */}
@@ -115,6 +115,24 @@ export default function Header() {
             className="text-(--text-muted) hover:text-cyan-400 hover:scale-110 transition-all duration-200"
           >
             <Youtube className="w-4 h-4" />
+          </a>
+          <a
+            id="social-facebook"
+            href="https://www.facebook.com/sugam.kandel.71112"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-(--text-muted) hover:text-cyan-400 hover:scale-110 transition-all duration-200"
+          >
+            <Facebook className="w-4 h-4" />
+          </a>
+          <a
+            id="social-x"
+            href="https://x.com/kadelsugam"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-(--text-muted) hover:text-cyan-400 hover:scale-110 transition-all duration-200"
+          >
+            <Twitter className="w-4 h-4" />
           </a>
           <button
             id="theme-toggle-desktop"
@@ -189,6 +207,24 @@ export default function Header() {
                   className="text-(--text-muted) hover:text-cyan-400"
                 >
                   <Youtube className="w-5 h-5" />
+                </a>
+                <a
+                  id="mobile-social-facebook"
+                  href="https://www.facebook.com/sugam.kandel.71112"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-(--text-muted) hover:text-cyan-400"
+                >
+                  <Facebook className="w-5 h-5" />
+                </a>
+                <a
+                  id="mobile-social-x"
+                  href="https://x.com/kadelsugam"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-(--text-muted) hover:text-cyan-400"
+                >
+                  <Twitter className="w-5 h-5" />
                 </a>
                 <button
                   id="theme-toggle-mobile"

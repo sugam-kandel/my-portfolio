@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { ArrowRight, Code, Bike, Compass, Terminal, Sparkles } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+import { getAge } from '../utils/age';
 
 export default function Hero() {
   const navigate = useNavigate();
@@ -13,7 +14,7 @@ export default function Hero() {
       title: 'Coding the Future',
       headingHighlight: 'One Line at a Time',
       description:
-        "I'm a 17-year-old Computer Science student at Everest Secondary School, and I began my coding journey just a few months ago. Since then, I've been fascinated by creating interactive web applications, solving logical challenges, and continuously expanding my skills as a developer.",
+        `I'm a ${getAge()}-year-old Computer Science student pursuing +2 Management, and I began my coding journey just a few months ago. Since then, I've been fascinated by creating interactive web applications, solving logical challenges, and continuously expanding my skills.`,
       cta: 'Explore My Passions',
       sectionId: 'passions',
       icon: Code,
@@ -25,7 +26,7 @@ export default function Hero() {
       title: 'Riding the Present',
       headingHighlight: 'With Fuel & Freedom',
       description:
-        'I have a keen obsession with motorbikes—studying specs, understanding dual-channel ABS, cylinder layouts, and exhaust notes. Living in Sainamaina, Butwal, riding through beautiful terrains represents my spirit of adventure.',
+        'I have a keen obsession with motorbikes—studying specs, understanding dual-channel ABS, cylinder layouts, and exhaust notes. Living in Butwal, Nepal, riding through beautiful terrains represents my spirit of adventure.',
       cta: 'Check My Vehicle Insights',
       sectionId: 'journey',
       icon: Bike,
@@ -37,7 +38,7 @@ export default function Hero() {
       title: 'Exploring Scenic Nepal',
       headingHighlight: 'Creating New Memories',
       description:
-        'Born in the peaceful hills of Shringa, Gulmi, and now living in Rupandehi, I thrive on traveling to new destinations, gathering deep experiences, and watching inspirational films that fuel my digital visual ideas.',
+        'Born in the peaceful hills of western Nepal and now living in Rupandehi, I thrive on traveling to new destinations, gathering deep experiences, and watching inspirational films that fuel my digital visual ideas.',
       cta: 'View My Travel Diary',
       sectionId: 'stats',
       icon: Compass,
@@ -78,7 +79,7 @@ export default function Hero() {
               </div>
 
               {/* Main semantic H1 for SEO */}
-              <h1 className="sr-only">Sugam Kandel | Portfolio - CS Student &amp; Software Developer</h1>
+              <h1 className="sr-only">Sugam Kandel | CS Student - +2 Management at Everest</h1>
 
               {/* Slide Heading */}
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-semibold text-(--text-primary) leading-tight capitalize">
@@ -96,7 +97,7 @@ export default function Hero() {
               {/* Interactive Slide Info Badge */}
               <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded bg-(--bg-chip) border border-(--border-soft) text-xs text-(--text-muted) font-mono">
                 <Terminal className="w-3.5 h-3.5 text-cyan-400" />
-                <span>Born: 2066-07-07 BS • Nepal</span>
+                <span>{getAge()} yrs • Computer Science Student • Nepal</span>
               </div>
 
               {/* CTA Button */}
@@ -214,7 +215,7 @@ export default function Hero() {
               <img
                 id="hero-sugam-avatar"
                 src="/assets/sugam.png"
-                alt="Sugam Kandel - Computer Science student and developer from Butwal, Nepal"
+                alt="Sugam Kandel - Computer Science student from Butwal, Nepal"
                 referrerPolicy="no-referrer"
                 className="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-500 scale-105 group-hover:scale-100"
               />

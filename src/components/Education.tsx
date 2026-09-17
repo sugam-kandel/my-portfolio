@@ -1,5 +1,6 @@
 import { motion } from 'motion/react';
 import { GraduationCap, Award, MapPin, Building, BookOpen, Star } from 'lucide-react';
+import { getAge } from '../utils/age';
 
 export default function Education() {
   const educationTimeline = [
@@ -21,7 +22,7 @@ export default function Education() {
       level: 'Secondary Education (Grade 10)',
       major: 'Secondary Education Examination (SEE) Graduate',
       timeline: 'Graduated 2081 BS (2024 AD)',
-      location: 'Sainamaina, Rupandehi',
+      location: 'Rupandehi, Nepal',
       description: 'Completed my secondary schooling with rigorous focus on foundational sciences, english linguistics, and basic mathematics. Active in creative writing clubs.',
       icon: BookOpen,
       color: 'border-pink-500/20 shadow-pink-500/5',
@@ -29,12 +30,12 @@ export default function Education() {
     },
     {
       id: 'roots',
-      institution: 'Shringa, Gulmi Roots',
+      institution: 'Hill Village Roots',
       level: 'Early Childhood & Primary Schooling',
       major: 'Village Upbringing & Serene Foundations',
-      timeline: 'Born 2066 BS (2009 AD)',
-      location: 'Shringa, Gulmi, Nepal',
-      description: 'Growing up surrounded by the serene hills of Gulmi taught me patience, community appreciation, and deep-seated humility. It remains my peaceful sanctuary.',
+      timeline: `Born 2009 • Age ${getAge()}`,
+      location: 'Hills of Western Nepal',
+      description: 'Growing up surrounded by the serene hills of western Nepal taught me patience, community appreciation, and deep-seated humility. It remains my peaceful sanctuary.',
       icon: Star,
       color: 'border-purple-500/20 shadow-purple-500/5',
       badgeColor: 'bg-purple-500/10 text-purple-400 border-purple-500/20'
@@ -63,7 +64,7 @@ export default function Education() {
           </div>
 
           <p className="text-(--text-muted) text-sm leading-relaxed font-light">
-            My academic journey bridges the tranquil hillside environment of Shringa, Gulmi, with the technical and modern training grounds of Butwal, Rupandehi. Studying computer science in grade 11 at Everest school acts as the core launchpad for my tech goals.
+            My academic journey bridges the tranquil hillside environment of my home village with the technical and modern training grounds of Butwal, Rupandehi. Studying computer science in grade 11 at Everest school acts as the core launchpad for my tech goals.
           </p>
 
           {/* Core Skills Summary Badge */}

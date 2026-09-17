@@ -22,7 +22,7 @@ export const PASSIONS: Passion[] = [
     title: 'Travel & Experiences',
     iconName: 'Compass',
     description: 'Exploring scenic landscapes, heritage, and local food culture. Gathering unique experiences that broaden my perspective.',
-    detail: 'Traveling lets me collect memories and learn about the diverse cultures of Nepal. From the serene hills of my hometown Shringa, Gulmi to the vibrant streets of Butwal, every destination teaches me something new.',
+    detail: 'Traveling lets me collect memories and learn about the diverse cultures of Nepal. From the serene hills of western Nepal to the vibrant streets of Butwal, every destination teaches me something new.',
     accentColor: 'from-purple-500 to-indigo-600'
   },
   {
@@ -61,7 +61,7 @@ export const STATS: StatItem[] = [
     id: 'academic_grade',
     label: 'Grade 11 CS',
     value: 'Active',
-    description: 'Everest Secondary School',
+    description: 'Computer Science in grade 11',
     iconName: 'GraduationCap'
   }
 ];
@@ -74,7 +74,7 @@ export const JOURNEY_ITEMS: JourneyItem[] = [
     image: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=600&auto=format&fit=crop',
     description: 'Successfully passed the Secondary Education Examination (SEE) from Rainbow English Secondary Boarding School, marking the completion of my high school foundation.',
     date: '2081 BS (2024 AD)',
-    location: 'Sainamaina, Rupandehi',
+    location: 'Rupandehi, Nepal',
     tag: 'Foundation'
   },
   {
@@ -94,17 +94,17 @@ export const JOURNEY_ITEMS: JourneyItem[] = [
     image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=600&auto=format&fit=crop',
     description: 'Discovered the magic of building interactive web pages. Built my first HTML/CSS project and felt the pure joy of seeing logic come to life on a browser screen.',
     date: '3 Months Ago',
-    location: 'Sainamaina-1, Butwal',
+    location: 'Butwal, Nepal',
     tag: 'Aha! Moment'
   },
   {
     id: 'hill-ride',
-    title: 'Gulmi to Rupandehi',
+    title: 'Journey to Rupandehi',
     category: 'travel',
     image: 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=600&auto=format&fit=crop',
-    description: 'Moved from my serene roots in Shringa, Gulmi to the active city of Sainamaina, Butwal, connecting my peaceful village values with modern urban opportunities.',
+    description: 'Moved from my serene hill-village roots in western Nepal to the active city of Butwal, connecting my peaceful village values with modern urban opportunities.',
     date: 'Transition',
-    location: 'Gulmi / Butwal',
+    location: 'Nepal',
     tag: 'Life Journey'
   },
   {
@@ -150,26 +150,26 @@ I started experimenting with basic JavaScript, simple CSS animations, and modern
     date: 'May 20, 2026',
     category: 'Bikes',
     comments: 7,
-    excerpt: 'For some, a motorcycle is just a mode of transport. For me, it is an engineering marvel and a gateway to exploring the scenic routes of Sainamaina.',
+    excerpt: 'For some, a motorcycle is just a mode of transport. For me, it is an engineering marvel and a gateway to exploring the scenic routes of western Nepal.',
     readTime: '4 min read',
     content: `To anyone else, a bike is just a vehicle that gets you from point A to point B. But to me, it is a magnificent symphony of engineering, aerodynamics, and passion.
 
 I spend hours reading about gear ratios, cylinder displacements, exhaust notes, and the evolution of cafe racers and adventure tourers. The way an engine converts fuel into pure, thrilling torque is fascinating. 
 
-Living in Sainamaina-1, Butwal, I am surrounded by beautiful roads and hills. When you ride, you are not isolated inside a metal box; you are part of the landscape. It teaches you to be present, to anticipate curves, and to respect the machinery under you.`
+Living in Butwal, Nepal, I am surrounded by beautiful roads and hills. When you ride, you are not isolated inside a metal box; you are part of the landscape. It teaches you to be present, to anticipate curves, and to respect the machinery under you.`
   },
   {
     id: 'blog-3',
-    title: 'The School Transition: From Shringa to Sainamaina',
+    title: 'The School Transition: From a Hill Village to City Life',
     date: 'April 05, 2026',
     category: 'Travel',
     comments: 2,
-    excerpt: 'How moving from Shringa, Gulmi to Sainamaina, Butwal reshaped my views on academics, friendships, and future tech opportunities.',
+    excerpt: 'How moving from a calm hill village to the city reshaped my views on academics, friendships, and future tech opportunities.',
     readTime: '5 min read',
-    content: `I was born in Shringa, Gulmi, a beautifully tranquil place nestled in the hills of western Nepal. It’s a place of lush green hills, close-knit communities, and a slow, peaceful pace of life. 
+    content: `I was born in a beautifully tranquil hill village nestled in the hills of western Nepal. It’s a place of lush green hills, close-knit communities, and a slow, peaceful pace of life. 
 
-Passing my SEE from Rainbow English Secondary Boarding School was a major milestone. But to pursue higher secondary education in Computer Science, I moved to Sainamaina-1, Butwal Rupandehi, enrolling at Everest Boarding Secondary School.
+Passing my SEE from Rainbow English Secondary Boarding School was a major milestone. But to pursue higher secondary education in Computer Science, I moved to Butwal, Rupandehi, enrolling at Everest Boarding Secondary School.
 
-The change was eye-opening. Transitioning from quiet hills to a bustling city center felt like entering a different dimension. However, it has been an amazing experience. It brought me closer to high-speed internet, technical peer groups, and the resources I need to pursue coding. I carry the peaceful serenity of Gulmi in my heart while utilizing the vibrant speed of Butwal to build my future.`
+The change was eye-opening. Transitioning from quiet hills to a bustling city center felt like entering a different dimension. However, it has been an amazing experience. It brought me closer to high-speed internet, technical peer groups, and the resources I need to pursue coding. I carry the peaceful serenity of my home village in my heart while utilizing the vibrant speed of Butwal to build my future.`
   }
 ];

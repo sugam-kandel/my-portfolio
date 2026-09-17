@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Mail, MessageSquare, Send, CheckCircle, Info, Phone, MapPin, Sparkles, AlertCircle } from 'lucide-react';
+import { submitContactForm } from '../config/forms';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -16,7 +17,7 @@ export default function Contact() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!formData.name || !formData.email || !formData.message) {
       setStatus('error');
@@ -25,12 +26,16 @@ export default function Contact() {
     }
 
     setStatus('loading');
-    
-    // Simulate API delivery
-    setTimeout(() => {
+
+    const result = await submitContactForm(formData);
+
+    if (result.success) {
       setStatus('success');
       setFormData({ name: '', email: '', subject: '', message: '' });
-    }, 1800);
+    } else {
+      setStatus('error');
+    }
+    setTimeout(() => setStatus('idle'), 3500);
   };
 
   return (
@@ -63,14 +68,14 @@ export default function Contact() {
           </div>
 
           <div className="relative z-10 shrink-0">
-            <a
-              id="cta-email-direct"
-              href="mailto:kandelsugam877@gmail.com"
-              className="group relative inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-(--text-primary) font-display font-bold text-xs tracking-widest capitalize rounded shadow-lg shadow-cyan-500/15 hover:shadow-cyan-500/30 hover:scale-[1.02] transition-all"
+            <button
+              id="cta-contact-form"
+              onClick={() => document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })}
+              className="group relative inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-(--text-primary) font-display font-bold text-xs tracking-widest capitalize rounded shadow-lg shadow-cyan-500/15 hover:shadow-cyan-500/30 hover:scale-[1.02] transition-all cursor-pointer"
             >
-              <span>Send a Direct Email</span>
+              <span>Send a Message</span>
               <Send className="w-4.5 h-4.5 group-hover:translate-x-1 transition-transform" />
-            </a>
+            </button>
           </div>
         </div>
 
@@ -114,7 +119,7 @@ export default function Contact() {
                 <div>
                   <span className="block text-[9px] font-mono text-(--text-faint) capitalize">Current Location</span>
                   <span className="text-xs font-display font-bold text-(--text-primary)">
-                    Sainamaina-1, Butwal, Rupandehi
+                    Butwal, Rupandehi, Nepal
                   </span>
                 </div>
               </div>
@@ -124,9 +129,9 @@ export default function Contact() {
                   <Info className="w-4 h-4" />
                 </div>
                 <div>
-                  <span className="block text-[9px] font-mono text-(--text-faint) capitalize">Academic Institution</span>
+                  <span className="block text-[9px] font-mono text-(--text-faint) capitalize">Current Focus</span>
                   <span className="text-xs font-display font-bold text-(--text-primary)">
-                    Everest Secondary Boarding School
+                    Computer Science Student (+2 Management)
                   </span>
                 </div>
               </div>
@@ -140,7 +145,17 @@ export default function Contact() {
               <span>Send Me a Message</span>
             </h3>
 
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form id="contact-form" onSubmit={handleSubmit} className="space-y-6">
+              <input
+                type="text"
+                name="botcheck"
+                value=""
+                onChange={() => {}}
+                className="hidden"
+                aria-hidden="true"
+                tabIndex={-1}
+                autoComplete="off"
+              />
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {/* Name */}
                 <div className="space-y-2">

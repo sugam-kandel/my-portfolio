@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Github, Instagram, Youtube, Send, Code, Heart, CheckCircle } from 'lucide-react';
+import { Github, Instagram, Youtube, Facebook, Twitter, Send, Heart, CheckCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function Footer() {
@@ -21,21 +21,21 @@ export default function Footer() {
       {/* Background glow node */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-96 h-96 bg-cyan-500/5 rounded-full blur-[100px] pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-6 relative z-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 pb-16 border-b border-(--border-subtle)">
+      <div className="max-w-7xl mx-auto px-6 relative z-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-(--border-subtle)">
         
         {/* Column 1 - Brand Profile */}
         <div className="lg:col-span-4 space-y-6">
           <Link
             id="footer-logo-link"
             to="/"
-            className="flex items-center gap-2 text-(--text-primary) font-display font-bold tracking-widest text-lg group cursor-pointer inline-flex"
+            className="flex items-center group cursor-pointer inline-flex"
           >
-            <div className="w-9 h-9 rounded bg-gradient-to-tr from-cyan-400 to-blue-600 flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform">
-              <Code className="w-5 h-5 text-(--text-primary)" />
-            </div>
-            <span className="bg-gradient-to-r from-white via-neutral-200 to-neutral-400 bg-clip-text text-transparent capitalize">
-              Sugam Kandel
-            </span>
+            <img
+              id="footer-logo"
+              src="/assets/fullLogo.png"
+              alt="Sugam Kandel"
+              className="h-32 w-auto rounded-lg group-hover:scale-105 transition-transform"
+            />
           </Link>
 
           <p className="text-(--text-muted) text-xs leading-relaxed font-light">
@@ -71,11 +71,29 @@ export default function Footer() {
             >
               <Youtube className="w-4 h-4" />
             </a>
+            <a
+              id="footer-social-facebook"
+              href="https://www.facebook.com/sugam.kandel.71112"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-8 h-8 rounded bg-(--bg-chip) hover:bg-cyan-500 hover:text-black hover:scale-105 transition-all flex items-center justify-center text-(--text-muted)"
+            >
+              <Facebook className="w-4 h-4" />
+            </a>
+            <a
+              id="footer-social-x"
+              href="https://x.com/kadelsugam"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-8 h-8 rounded bg-(--bg-chip) hover:bg-cyan-500 hover:text-black hover:scale-105 transition-all flex items-center justify-center text-(--text-muted)"
+            >
+              <Twitter className="w-4 h-4" />
+            </a>
           </div>
         </div>
 
         {/* Column 2 - Quick Links */}
-        <div className="lg:col-span-2.5 space-y-6">
+        <div className="lg:col-span-2 space-y-6">
           <h4 className="text-xs font-display font-bold text-(--text-primary) capitalize tracking-widest relative pb-2 border-b border-(--border-subtle)">
             Who We Are
           </h4>
@@ -103,7 +121,7 @@ export default function Footer() {
         </div>
 
         {/* Column 3 - My Passions */}
-        <div className="lg:col-span-2.5 space-y-6">
+        <div className="lg:col-span-2 space-y-6">
           <h4 className="text-xs font-display font-bold text-(--text-primary) capitalize tracking-widest relative pb-2 border-b border-(--border-subtle)">
             Our Work
           </h4>
@@ -128,7 +146,7 @@ export default function Footer() {
         </div>
 
         {/* Column 4 - Newsletter */}
-        <div className="lg:col-span-3 space-y-6">
+        <div className="lg:col-span-4 space-y-6">
           <h4 className="text-xs font-display font-bold text-(--text-primary) capitalize tracking-widest relative pb-2 border-b border-(--border-subtle)">
             Newsletter
           </h4>
@@ -175,14 +193,14 @@ export default function Footer() {
       </div>
 
       {/* Copyright row */}
-      <div className="max-w-7xl mx-auto px-6 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-[11px] font-mono text-(--text-faint)">
+      <div className="max-w-7xl mx-auto px-6 pt-6 flex flex-col md:flex-row items-center justify-between gap-4 text-[11px] font-mono text-(--text-faint)">
         <div>
           Copyright © 2026 Sugam Kandel. All rights reserved.
         </div>
         <div className="flex items-center gap-1.5">
           <span>Constructed with</span>
           <Heart className="w-3 h-3 text-rose-500 fill-rose-500 animate-pulse" />
-          <span>in Sainamaina, Butwal, Nepal</span>
+          <span>in Butwal, Nepal</span>
         </div>
       </div>
     </footer>
