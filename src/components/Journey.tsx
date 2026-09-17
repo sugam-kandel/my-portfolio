@@ -196,6 +196,7 @@ export default function Journey() {
               <button
                 id="close-journey-modal-btn"
                 onClick={() => setSelectedItem(null)}
+                aria-label="Close journey milestone details"
                 className="absolute top-4 right-4 z-20 text-(--text-primary) bg-black/40 hover:bg-black/60 p-1.5 rounded-full backdrop-blur-sm border border-(--border-soft) transition-colors cursor-pointer"
               >
                 <X className="w-5 h-5" />

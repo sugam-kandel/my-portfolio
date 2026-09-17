@@ -113,6 +113,7 @@ export default function Blog() {
               <button
                 id="close-blog-modal-btn"
                 onClick={() => setSelectedPost(null)}
+                aria-label="Close blog post"
                 className="absolute top-6 right-6 text-(--text-muted) hover:text-(--text-primary) p-1 rounded-full hover:bg-(--bg-chip) transition-colors cursor-pointer"
               >
                 <X className="w-5 h-5" />

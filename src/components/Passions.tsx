@@ -130,6 +130,7 @@ export default function Passions() {
               <button
                 id="close-passion-modal-btn"
                 onClick={() => setSelectedPassion(null)}
+                aria-label="Close passion details"
                 className="absolute top-6 right-6 text-(--text-muted) hover:text-(--text-primary) p-1 rounded-full hover:bg-(--bg-chip) transition-colors cursor-pointer"
               >
                 <X className="w-5 h-5" />
