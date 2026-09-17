@@ -4,7 +4,7 @@ import { GraduationCap, Award, MapPin, Building, BookOpen, Star } from 'lucide-r
 export default function Education() {
   const educationTimeline = [
     {
-      id: 'everest',
+      id: 'highschool',
       institution: 'High School (Grade 11 & 12)',
       level: 'Grade 11 & 12 (High School)',
       major: 'Computer Science & Mathematics',
@@ -16,7 +16,7 @@ export default function Education() {
       badgeColor: 'bg-cyan-500/10 text-cyan-400 border-cyan-500/20'
     },
     {
-      id: 'rainbow',
+      id: 'secondary',
       institution: 'Secondary School (Grade 10)',
       level: 'Secondary Education (Grade 10)',
       major: 'Secondary Education Examination (SEE) Graduate',

@@ -78,7 +78,7 @@ export const JOURNEY_ITEMS: JourneyItem[] = [
     tag: 'Foundation'
   },
   {
-    id: 'everest-cs',
+    id: 'cs-grade11',
     title: 'Grade 11 Computer Science',
     category: 'education',
     image: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=600&auto=format&fit=crop',
