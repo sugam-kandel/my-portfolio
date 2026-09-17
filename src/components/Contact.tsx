@@ -105,10 +105,10 @@ export default function Contact() {
                   <Mail className="w-4 h-4" />
                 </div>
                 <div>
-                  <span className="block text-[9px] font-mono text-(--text-faint) capitalize">My Email</span>
-                  <a href="mailto:kandelsugam877@gmail.com" className="text-xs font-display font-bold text-(--text-primary) hover:text-cyan-400 transition-colors">
-                    kandelsugam877@gmail.com
-                  </a>
+                  <span className="block text-[9px] font-mono text-(--text-faint) capitalize">Best Way to Reach Me</span>
+                  <span className="text-xs font-display font-bold text-(--text-primary)">
+                    Use the contact form — I reply within a few days.
+                  </span>
                 </div>
               </div>
 

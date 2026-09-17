@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { ArrowRight, Code, Bike, Compass, Terminal, Sparkles } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
-import { getAge } from '../utils/age';
 
 export default function Hero() {
   const navigate = useNavigate();
@@ -14,7 +13,7 @@ export default function Hero() {
       title: 'Coding the Future',
       headingHighlight: 'One Line at a Time',
       description:
-        `I'm a ${getAge()}-year-old Computer Science student pursuing +2 Management, and I began my coding journey just a few months ago. Since then, I've been fascinated by creating interactive web applications, solving logical challenges, and continuously expanding my skills.`,
+        `I'm a Computer Science student pursuing +2 Management, and I began my coding journey just a few months ago. Since then, I've been fascinated by creating interactive web applications, solving logical challenges, and continuously expanding my skills.`,
       cta: 'Explore My Passions',
       sectionId: 'passions',
       icon: Code,
@@ -79,7 +78,7 @@ export default function Hero() {
               </div>
 
               {/* Main semantic H1 for SEO */}
-              <h1 className="sr-only">Sugam Kandel | CS Student - +2 Management at Everest</h1>
+              <h1 className="sr-only">Sugam Kandel | CS Student - +2 Management</h1>
 
               {/* Slide Heading */}
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-semibold text-(--text-primary) leading-tight capitalize">
@@ -97,7 +96,7 @@ export default function Hero() {
               {/* Interactive Slide Info Badge */}
               <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded bg-(--bg-chip) border border-(--border-soft) text-xs text-(--text-muted) font-mono">
                 <Terminal className="w-3.5 h-3.5 text-cyan-400" />
-                <span>{getAge()} yrs • Computer Science Student • Nepal</span>
+                <span>Computer Science Student • Based in Butwal, Nepal</span>
               </div>
 
               {/* CTA Button */}

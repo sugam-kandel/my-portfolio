@@ -2,8 +2,8 @@ import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { getPageSeo } from '../seo';
 
-const SITE_URL = 'https://sugamkandel.com.np';
-const OG_IMAGE = `${SITE_URL}/assets/sugam.png`;
+const SITE_URL = 'https://www.sugamkandel.com.np';
+const OG_IMAGE = `${SITE_URL}/og-image.png`;
 
 function setMeta(selector: string, keyAttr: string, keyValue: string, content: string) {
   let el = document.head.querySelector<HTMLMetaElement>(selector);

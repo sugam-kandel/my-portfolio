@@ -72,7 +72,7 @@ export const JOURNEY_ITEMS: JourneyItem[] = [
     title: 'SEE Graduation',
     category: 'education',
     image: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=600&auto=format&fit=crop',
-    description: 'Successfully passed the Secondary Education Examination (SEE) from Rainbow English Secondary Boarding School, marking the completion of my high school foundation.',
+    description: 'Successfully passed the Secondary Education Examination (SEE), marking the completion of my high school foundation.',
     date: '2081 BS (2024 AD)',
     location: 'Rupandehi, Nepal',
     tag: 'Foundation'
@@ -82,7 +82,7 @@ export const JOURNEY_ITEMS: JourneyItem[] = [
     title: 'Grade 11 Computer Science',
     category: 'education',
     image: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=600&auto=format&fit=crop',
-    description: 'Enrolled in Everest English Boarding Secondary School in Grade 11, pursuing Computer Science as my core stream to build a career in software development.',
+    description: 'Enrolled in Grade 11, pursuing Computer Science as my core stream to build a career in software development.',
     date: 'Current (2025/2026)',
     location: 'Butwal, Rupandehi',
     tag: 'Academic'
@@ -138,7 +138,7 @@ export const BLOG_POSTS: BlogPost[] = [
     comments: 4,
     excerpt: 'Starting web development as a complete beginner can feel daunting, but when I ran my first loop, I realized code is the ultimate playground of creativity.',
     readTime: '3 min read',
-    content: `It all started just a few months ago. In my Grade 11 Computer Science class at Everest Secondary School, we began discussing logic and programming. Curiously, I opened up a text editor at home and typed in some simple markup.
+    content: `It all started just a few months ago. In my Grade 11 Computer Science class, we began discussing logic and programming. Curiously, I opened up a text editor at home and typed in some simple markup.
 
 The moment I refreshed the browser and saw my styling take effect, my perspective changed completely. In a world governed by fixed rules, code offers a unique sandbox of absolute freedom. If you can think it, you can build it. 
 
@@ -168,7 +168,7 @@ Living in Butwal, Nepal, I am surrounded by beautiful roads and hills. When you 
     readTime: '5 min read',
     content: `I was born in a beautifully tranquil hill village nestled in the hills of western Nepal. It’s a place of lush green hills, close-knit communities, and a slow, peaceful pace of life. 
 
-Passing my SEE from Rainbow English Secondary Boarding School was a major milestone. But to pursue higher secondary education in Computer Science, I moved to Butwal, Rupandehi, enrolling at Everest Boarding Secondary School.
+Passing my SEE was a major milestone. But to pursue higher secondary education in Computer Science, I moved to Butwal, Rupandehi.
 
 The change was eye-opening. Transitioning from quiet hills to a bustling city center felt like entering a different dimension. However, it has been an amazing experience. It brought me closer to high-speed internet, technical peer groups, and the resources I need to pursue coding. I carry the peaceful serenity of my home village in my heart while utilizing the vibrant speed of Butwal to build my future.`
   }

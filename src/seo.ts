@@ -6,14 +6,14 @@ export interface PageSeo {
   ogDescription: string;
 }
 
-const SITE_URL = 'https://sugamkandel.com.np';
+const SITE_URL = 'https://www.sugamkandel.com.np';
 
 const homeSeo: PageSeo = {
-  title: 'Sugam Kandel | CS Student - +2 Management at Everest',
+  title: 'Sugam Kandel | CS Student - +2 Management',
   description:
-    'Official website of Sugam Kandel — a Computer Science student pursuing +2 Management at Everest, from Butwal, Nepal.',
+    'Official website of Sugam Kandel — a Computer Science student pursuing +2 Management, from Butwal, Nepal.',
   canonical: `${SITE_URL}/`,
-  ogTitle: 'Sugam Kandel | CS Student - +2 Management at Everest',
+  ogTitle: 'Sugam Kandel | CS Student - +2 Management',
   ogDescription:
     'Explore the portfolio of Sugam Kandel — computer science student, motorbike enthusiast, and traveler from Butwal, Nepal.',
 };
@@ -47,13 +47,13 @@ const routeSeo: Record<string, PageSeo> = {
       'Coding journey, bikes researched, travel spots explored, and Grade 11 CS — the stats behind Sugam Kandel.',
   },
   '/education': {
-    title: 'Sugam Kandel Education | Everest Secondary School Butwal',
+    title: 'Sugam Kandel Education | +2 Management in Butwal',
     description:
-      'Education background of Sugam Kandel — Grade 11 & 12 Computer Science (Management stream) at Everest English Boarding Secondary School Butwal, SEE graduate from Rainbow English Boarding School, roots in the hills of western Nepal.',
+      'Education background of Sugam Kandel — Grade 11 & 12 Computer Science (Management stream) at a high school in Butwal, SEE graduate, roots in the hills of western Nepal.',
     canonical: `${SITE_URL}/education`,
-    ogTitle: 'Sugam Kandel Education | Everest Secondary School Butwal',
+    ogTitle: 'Sugam Kandel Education | +2 Management in Butwal',
     ogDescription:
-      'Sugam Kandel is a Computer Science student pursuing +2 Management at Everest English Boarding Secondary School Butwal, Nepal.',
+      'Sugam Kandel is a Computer Science student pursuing +2 Management at a high school in Butwal, Nepal.',
   },
   '/blog': {
     title: 'Sugam Kandel Blog | Coding, Bikes & Travel Perspectives',

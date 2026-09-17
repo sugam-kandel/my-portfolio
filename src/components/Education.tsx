@@ -1,41 +1,40 @@
 import { motion } from 'motion/react';
 import { GraduationCap, Award, MapPin, Building, BookOpen, Star } from 'lucide-react';
-import { getAge } from '../utils/age';
 
 export default function Education() {
   const educationTimeline = [
     {
       id: 'everest',
-      institution: 'Everest English Boarding Secondary School',
+      institution: 'High School (Grade 11 & 12)',
       level: 'Grade 11 & 12 (High School)',
       major: 'Computer Science & Mathematics',
       timeline: '2082 BS - Present (2025/2026 AD)',
       location: 'Butwal, Rupandehi',
-      description: 'Acquiring strong foundation in computer programming, algorithms, database architectures, and digital systems. Experiencing peer-to-peer coding collaboration.',
+      description: 'Acquiring a strong foundation in computer programming, algorithms, database architectures, and digital systems, with peer-to-peer coding collaboration.',
       icon: GraduationCap,
       color: 'border-cyan-500/20 shadow-cyan-500/5',
       badgeColor: 'bg-cyan-500/10 text-cyan-400 border-cyan-500/20'
     },
     {
       id: 'rainbow',
-      institution: 'Rainbow English Secondary Boarding School',
+      institution: 'Secondary School (Grade 10)',
       level: 'Secondary Education (Grade 10)',
       major: 'Secondary Education Examination (SEE) Graduate',
       timeline: 'Graduated 2081 BS (2024 AD)',
       location: 'Rupandehi, Nepal',
-      description: 'Completed my secondary schooling with rigorous focus on foundational sciences, english linguistics, and basic mathematics. Active in creative writing clubs.',
+      description: 'Completed my secondary schooling with rigorous focus on foundational sciences, english linguistics, and basic mathematics, active in creative writing clubs.',
       icon: BookOpen,
       color: 'border-pink-500/20 shadow-pink-500/5',
       badgeColor: 'bg-pink-500/10 text-pink-400 border-pink-500/20'
     },
     {
       id: 'roots',
-      institution: 'Hill Village Roots',
+      institution: 'Village Roots',
       level: 'Early Childhood & Primary Schooling',
       major: 'Village Upbringing & Serene Foundations',
-      timeline: `Born 2009 • Age ${getAge()}`,
+      timeline: 'Childhood Years',
       location: 'Hills of Western Nepal',
-      description: 'Growing up surrounded by the serene hills of western Nepal taught me patience, community appreciation, and deep-seated humility. It remains my peaceful sanctuary.',
+      description: 'Growing up in the serene hills of western Nepal taught me patience, community appreciation, and deep-seated humility. It remains my peaceful sanctuary.',
       icon: Star,
       color: 'border-purple-500/20 shadow-purple-500/5',
       badgeColor: 'bg-purple-500/10 text-purple-400 border-purple-500/20'
@@ -64,7 +63,7 @@ export default function Education() {
           </div>
 
           <p className="text-(--text-muted) text-sm leading-relaxed font-light">
-            My academic journey bridges the tranquil hillside environment of my home village with the technical and modern training grounds of Butwal, Rupandehi. Studying computer science in grade 11 at Everest school acts as the core launchpad for my tech goals.
+            My academic journey bridges the serene hills of western Nepal with the technical and modern training grounds of Butwal, Rupandehi. Studying computer science in grade 11 acts as the core launchpad for my tech goals.
           </p>
 
           {/* Core Skills Summary Badge */}
@@ -79,7 +78,7 @@ export default function Education() {
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
               </span>
               <p className="text-(--text-body) text-xs font-semibold">
-                Everest secondary School • Grade 11 Computer Science
+                Grade 11 Computer Science • Butwal, Rupandehi
               </p>
             </div>
             <p className="text-(--text-muted) text-[11px] leading-relaxed">
