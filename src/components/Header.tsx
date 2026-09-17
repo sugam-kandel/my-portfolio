@@ -56,7 +56,7 @@ export default function Header() {
         >
           <img
             id="header-logo"
-            src="/assets/fullLogo-256.png"
+            src="/assets/sugam-kandel-logo-256.webp"
             alt="Sugam Kandel"
             width={100}
             height={100}

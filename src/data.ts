@@ -71,7 +71,7 @@ export const JOURNEY_ITEMS: JourneyItem[] = [
     id: 'see-success',
     title: 'SEE Graduation',
     category: 'education',
-    image: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=600&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=600&auto=format&fit=crop',
     description: 'Successfully passed the Secondary Education Examination (SEE), marking the completion of my high school foundation.',
     date: '2081 BS (2024 AD)',
     location: 'Rupandehi, Nepal',

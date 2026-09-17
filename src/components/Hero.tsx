@@ -199,7 +199,7 @@ export default function Hero() {
             <div className="absolute inset-3 rounded-xl overflow-hidden bg-(--bg-panel) rotate-3 group-hover:rotate-0 transition-all duration-500 border border-(--border-soft) shadow-2xl flex items-center justify-center">
               <img
                 id="hero-sugam-avatar"
-                src="/assets/sugam-512.jpg"
+                src="/assets/sugam-kandel-portrait-512.webp"
                 alt="Sugam Kandel - Computer Science student from Butwal, Nepal"
                 width={512}
                 height={683}

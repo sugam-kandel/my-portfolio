@@ -32,7 +32,7 @@ export default function Footer() {
           >
             <img
               id="footer-logo"
-              src="/assets/fullLogo-256.png"
+              src="/assets/sugam-kandel-logo-256.webp"
               alt="Sugam Kandel"
               width={128}
               height={128}
