@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react';
+import type React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
 import Header from './components/Header';
@@ -6,21 +6,12 @@ import Hero from './components/Hero';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
 import SEOHelper from './components/SEOHelper';
-
-const Passions = React.lazy(() => import('./components/Passions'));
-const Journey = React.lazy(() => import('./components/Journey'));
-const Stats = React.lazy(() => import('./components/Stats'));
-const Education = React.lazy(() => import('./components/Education'));
-const Blog = React.lazy(() => import('./components/Blog'));
-const Contact = React.lazy(() => import('./components/Contact'));
-
-function RouteLoader() {
-  return (
-    <div className="py-32 flex items-center justify-center text-xs font-mono tracking-widest text-(--text-muted)">
-      Loading&hellip;
-    </div>
-  );
-}
+import Passions from './components/Passions';
+import Journey from './components/Journey';
+import Stats from './components/Stats';
+import Education from './components/Education';
+import Blog from './components/Blog';
+import Contact from './components/Contact';
 
 // A high-contrast, beautiful layout wrapper for standalone pages
 function PageLayout({ children }: { children: React.ReactNode }) {
@@ -82,19 +73,17 @@ export default function App() {
 
         {/* Routes configuration */}
         <main className="relative z-10">
-          <Suspense fallback={<RouteLoader />}>
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/passions" element={<PageLayout><Passions /></PageLayout>} />
-              <Route path="/journey" element={<PageLayout><Journey /></PageLayout>} />
-              <Route path="/stats" element={<PageLayout><Stats /></PageLayout>} />
-              <Route path="/education" element={<PageLayout><Education /></PageLayout>} />
-              <Route path="/blog" element={<PageLayout><Blog /></PageLayout>} />
-              <Route path="/contact" element={<PageLayout><Contact /></PageLayout>} />
-              {/* Fallback wildcard to main home */}
-              <Route path="*" element={<Home />} />
-            </Routes>
-          </Suspense>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/passions" element={<PageLayout><Passions /></PageLayout>} />
+            <Route path="/journey" element={<PageLayout><Journey /></PageLayout>} />
+            <Route path="/stats" element={<PageLayout><Stats /></PageLayout>} />
+            <Route path="/education" element={<PageLayout><Education /></PageLayout>} />
+            <Route path="/blog" element={<PageLayout><Blog /></PageLayout>} />
+            <Route path="/contact" element={<PageLayout><Contact /></PageLayout>} />
+            {/* Fallback wildcard to main home */}
+            <Route path="*" element={<Home />} />
+          </Routes>
         </main>
 
         {/* Global branding footer with link lists */}
