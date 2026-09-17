@@ -9,7 +9,6 @@ export default function Hero() {
 
   const slides = [
     {
-      subtitle: 'Student & Coder',
       title: 'Coding the Future',
       headingHighlight: 'One Line at a Time',
       description:
@@ -17,11 +16,9 @@ export default function Hero() {
       cta: 'Explore My Passions',
       sectionId: 'passions',
       icon: Code,
-      accentColor: 'text-cyan-400',
       glowColor: 'rgba(34, 211, 238, 0.15)',
     },
     {
-      subtitle: 'Bike Enthusiast',
       title: 'Riding the Present',
       headingHighlight: 'With Fuel & Freedom',
       description:
@@ -29,11 +26,9 @@ export default function Hero() {
       cta: 'Check My Vehicle Insights',
       sectionId: 'journey',
       icon: Bike,
-      accentColor: 'text-pink-400',
       glowColor: 'rgba(244, 63, 94, 0.15)',
     },
     {
-      subtitle: 'Curious Traveler',
       title: 'Exploring Scenic Nepal',
       headingHighlight: 'Creating New Memories',
       description:
@@ -41,7 +36,6 @@ export default function Hero() {
       cta: 'View My Travel Diary',
       sectionId: 'stats',
       icon: Compass,
-      accentColor: 'text-purple-400',
       glowColor: 'rgba(168, 85, 247, 0.15)',
     },
   ];
@@ -51,7 +45,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="min-h-screen relative flex items-center bg-(--bg-base) bg-dark-grid pt-24 pb-16 overflow-hidden"
+      className="min-h-screen relative flex items-center bg-(--bg-base) bg-dark-grid pt-32 pb-10 md:pb-16 overflow-hidden"
     >
       {/* Background Glows */}
       <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] rounded-full bg-cyan-900/10 blur-[120px] pointer-events-none" />
@@ -69,14 +63,6 @@ export default function Hero() {
               transition={{ duration: 0.5, ease: 'easeOut' }}
               className="space-y-6"
             >
-              {/* Slide Subtitle */}
-              <div className="flex items-center gap-2">
-                <span className="h-[2px] w-8 bg-gradient-to-r from-cyan-500 to-blue-500" />
-                <span className={`text-xs font-display tracking-[0.25em] font-bold ${currentSlide.accentColor}`}>
-                  {currentSlide.subtitle}
-                </span>
-              </div>
-
               {/* Main semantic H1 for SEO */}
               <h1 className="sr-only">Sugam Kandel | CS Student Portfolio - +2 Management, Nepal</h1>
 

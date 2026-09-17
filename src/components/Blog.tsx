@@ -8,7 +8,7 @@ export default function Blog() {
   const [selectedPost, setSelectedPost] = useState<BlogPost | null>(null);
 
   return (
-    <section id="blog" className="py-24 bg-(--bg-section) relative overflow-hidden">
+    <section id="blog" className="py-14 md:py-24 bg-(--bg-section) relative overflow-hidden">
       {/* Decorative blurry nodes */}
       <div className="absolute top-1/4 right-0 w-96 h-96 bg-cyan-500/5 rounded-full blur-[110px] pointer-events-none" />
       <div className="absolute bottom-1/4 left-0 w-80 h-80 bg-pink-500/5 rounded-full blur-[90px] pointer-events-none" />

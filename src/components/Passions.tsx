@@ -23,7 +23,7 @@ export default function Passions() {
   };
 
   return (
-    <section id="passions" className="py-24 bg-(--bg-section) relative overflow-hidden">
+    <section id="passions" className="py-14 md:py-24 bg-(--bg-section) relative overflow-hidden">
       {/* Background elements */}
       <div className="absolute top-1/2 left-0 -translate-y-1/2 w-96 h-96 bg-purple-500/5 rounded-full blur-[100px] pointer-events-none" />
       <div className="absolute top-1/4 right-0 w-80 h-80 bg-cyan-500/5 rounded-full blur-[80px] pointer-events-none" />

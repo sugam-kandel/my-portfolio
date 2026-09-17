@@ -51,7 +51,7 @@ export default function Journey() {
   };
 
   return (
-    <section id="journey" className="py-24 bg-(--bg-base) relative overflow-hidden">
+    <section id="journey" className="py-14 md:py-24 bg-(--bg-base) relative overflow-hidden">
       {/* Background accents */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-cyan-950/20 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-purple-950/10 rounded-full blur-[140px] pointer-events-none" />

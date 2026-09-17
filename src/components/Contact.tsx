@@ -39,7 +39,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-24 bg-(--bg-base) relative overflow-hidden">
+    <section id="contact" className="py-14 md:py-24 bg-(--bg-base) relative overflow-hidden">
       {/* Decorative cyber blurs */}
       <div className="absolute top-1/2 left-0 w-[400px] h-[400px] bg-cyan-950/20 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-purple-950/15 rounded-full blur-[130px] pointer-events-none" />

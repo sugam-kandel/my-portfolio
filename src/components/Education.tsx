@@ -42,7 +42,7 @@ export default function Education() {
   ];
 
   return (
-    <section id="education" className="py-24 bg-(--bg-base) relative overflow-hidden">
+    <section id="education" className="py-14 md:py-24 bg-(--bg-base) relative overflow-hidden">
       {/* Grid Lines Background */}
       <div className="absolute inset-0 bg-dark-grid opacity-30 pointer-events-none" />
 

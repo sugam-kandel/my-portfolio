@@ -44,7 +44,7 @@ export default function Header() {
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
         isScrolled
           ? 'bg-(--bg-header)/95 backdrop-blur-md border-b border-(--border-subtle) py-4 shadow-lg'
-          : 'bg-transparent py-6'
+          : 'bg-transparent py-4'
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
@@ -58,9 +58,9 @@ export default function Header() {
             id="header-logo"
             src="/assets/fullLogo-256.png"
             alt="Sugam Kandel"
-            width={56}
-            height={56}
-            className="h-14 w-auto rounded-lg group-hover:scale-105 transition-transform"
+            width={100}
+            height={100}
+            className="w-[100px] h-[100px] rounded-lg group-hover:scale-105 transition-transform"
           />
         </Link>
 
