@@ -2,6 +2,7 @@ import { readFileSync, writeFileSync } from 'node:fs';
 import { inflateSync, deflateSync } from 'node:zlib';
 
 const SIG = Buffer.from([0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a]);
+const BG = [5, 6, 15];
 
 const crcTable = (() => {
   const t = new Uint32Array(256);
@@ -93,24 +94,48 @@ function rangeCoverage(size, out, factor) {
   return map;
 }
 
-const src = decodePNG(readFileSync('scripts/favicon-source.png'));
-const SIZE = 192, f = src.w / SIZE;
-const xs = rangeCoverage(src.w, SIZE, f), ys = rangeCoverage(src.h, SIZE, f);
-const dst = Buffer.alloc(SIZE * SIZE * 4);
-for (let y = 0; y < SIZE; y++) {
-  for (let x = 0; x < SIZE; x++) {
-    const r = [0, 0, 0, 0];
-    for (const [iy, wy] of ys[y]) {
-      for (const [ix, wx] of xs[x]) {
-        const w = wx * wy, o = (iy * src.w + ix) * 4;
-        for (let c = 0; c < 4; c++) r[c] += src.px[o + c] * w;
+function downscale(src, outW, outH) {
+  const fw = src.w / outW, fh = src.h / outH;
+  const xs = rangeCoverage(src.w, outW, fw), ys = rangeCoverage(src.h, outH, fh);
+  const dst = Buffer.alloc(outW * outH * 4);
+  for (let y = 0; y < outH; y++) {
+    for (let x = 0; x < outW; x++) {
+      const r = [0, 0, 0, 0];
+      let tot = 0;
+      for (const [iy, wy] of ys[y]) {
+        for (const [ix, wx] of xs[x]) {
+          const w = wx * wy, o = (iy * src.w + ix) * 4;
+          tot += w;
+          for (let c = 0; c < 4; c++) r[c] += src.px[o + c] * w;
+        }
       }
+      const o = (y * outW + x) * 4;
+      for (let c = 0; c < 4; c++) dst[o + c] = Math.round(r[c] / tot);
     }
-    const o = (y * SIZE + x) * 4;
-    for (let c = 0; c < 4; c++) dst[o + c] = Math.round(r[c]);
   }
+  return { w: outW, h: outH, px: dst };
 }
-writeFileSync('public/favicon-192x192.png', encodePNG(SIZE, SIZE, dst));
+
+// Composite the transparent logo onto the site's dark background so it is
+// visible on light/white surfaces (Google's favicon badge, light browser tabs).
+function onBg(src) {
+  const px = Buffer.alloc(src.w * src.h * 4);
+  for (let i = 0; i < src.w * src.h; i++) {
+    const a = src.px[i * 4 + 3] / 255;
+    px[i * 4] = Math.round(BG[0] * (1 - a) + src.px[i * 4] * a);
+    px[i * 4 + 1] = Math.round(BG[1] * (1 - a) + src.px[i * 4 + 1] * a);
+    px[i * 4 + 2] = Math.round(BG[2] * (1 - a) + src.px[i * 4 + 2] * a);
+    px[i * 4 + 3] = 255;
+  }
+  return { w: src.w, h: src.h, px };
+}
+
+const master = onBg(decodePNG(readFileSync('scripts/favicon-source.png')));
+
+for (const size of [16, 32, 192]) {
+  const icon = downscale(master, size, size);
+  writeFileSync(`public/favicon-${size}x${size}.png`, encodePNG(size, size, icon.px));
+}
 
 function writeIco(entries) {
   const header = Buffer.alloc(6);
@@ -136,4 +161,4 @@ const ico = writeIco([
 ]);
 writeFileSync('public/favicon.ico', ico);
 
-console.log(`gen-icons: wrote favicon-192x192.png (${SIZE}x${SIZE}) and favicon.ico (16+32, ${ico.length} bytes)`);
+console.log('gen-icons: wrote favicon-16x16.png, favicon-32x32.png, favicon-192x192.png (dark bg) and favicon.ico');
